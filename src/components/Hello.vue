@@ -1,22 +1,30 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
-      <li><a href="http://chat.vuejs.org/" target="_blank" rel="noopener">Vue Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
-      <li><a href="http://vuejs-templates.github.io/webpack/" target="_blank" rel="noopener">Docs for This Template</a></li>
-    </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li><a href="http://router.vuejs.org/" target="_blank" rel="noopener">vue-router</a></li>
-      <li><a href="http://vuex.vuejs.org/" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="http://vue-loader.vuejs.org/" target="_blank" rel="noopener">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-    </ul>
+  <div class="view-header hello">
+    <!-- https://photos.google.com/share/AF1QipMDfEJLnSGnPU1rNlqHlWHlrWIam9Q4RF8uBo3cUGmaC8c-9Tce7kax8XsR2LacWg/photo/AF1QipOshjKKUEcaM_TWwAIGYAoBh7Sh6c03SOK21lZH?key=Q1VvdDZtSTZJVUJ2Tm9pNnk5SlU3ZkNhLVJoVmNR -->
+    <h1>    
+       <img class="cover-photo" src="static\img\engagement1.jpg" alt="Kemari and Katherine Engagement Pic">
+    </h1>
+     <div class="section wedding-couple-names">
+      <h1>Katherine Campanile</h1>
+      <h3>AND</h3>
+      <h1>Kemari Legg</h1>
+    </div>
+    <!-- TODO: Add Div for the Wedding Date, Hashtag, and location -->
+    <div class="section wedding-meet">
+      <h2>How We Met</h2>
+      <h3>August 13th, 2013</h3>
+      <p>It all started with an "About Me" and Firefly...</p>
+    </div>
+    <div class="section wedding-proposal">
+      <h2>The Proposal</h2>
+      <h3>October 28th, 2017</h3>
+      <p>Months earlier Kemari contacted the band Misterwives for the plan of a lifetime...</p>
+    </div>
+     <h1>    
+       <img class="cover-photo" src="static\img\engagement-footer-1.jpg" alt="Kemari and Katherine Engagement Pic">
+    </h1>
   </div>
+  
 </template>
 
 <script>
@@ -48,5 +56,11 @@ li {
 
 a {
   color: #35495E;
+}
+.cover-photo {
+  max-width: 100%; height: auto;
+}
+.section {
+padding: 5rem;
 }
 </style>
