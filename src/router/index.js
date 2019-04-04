@@ -24,5 +24,6 @@ const routes = [
  * Router for the application
  */
 export default new VueRouter({
+  mode: 'history',
   routes,
 });
