@@ -62,6 +62,11 @@ export default {
       },
     };
   },
+  mounted() {
+    const googlePhotoScript = document.createElement('script');
+    googlePhotoScript.setAttribute('src', 'https://cdn.jsdelivr.net/npm/publicalbum@latest/embed-ui.min.js');
+    document.head.appendChild(googlePhotoScript);
+  },
 };
 </script>
 
