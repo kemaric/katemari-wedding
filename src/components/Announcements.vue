@@ -12,7 +12,7 @@ export default {
   name: 'announcements',
   data() {
     return {
-      msg: 'Stay tuned for upcoming #KatemariWedding Anncouncements...',
+      msg: 'Stay tuned for upcoming #KatemariWedding Announcements...',
       announcements: [],
     };
   },

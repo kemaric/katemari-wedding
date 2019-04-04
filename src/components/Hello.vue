@@ -16,7 +16,7 @@
     </div>
     <div class="section wedding-proposal">
       <h2>The Proposal</h2>
-      <h3>October 28th, 2017</h3>
+      <h3>October 27th, 2017</h3>
       <p>Months earlier Kemari contacted the band Misterwives for the plan of a lifetime...</p>
     </div>
      <h1>    
