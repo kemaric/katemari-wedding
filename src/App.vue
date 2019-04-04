@@ -33,7 +33,7 @@
     </main>
     <footer>
       Made with love by Kemari
-      Design heavily inspired from <a href="https://www.zola.com/wedding-planning/website/design/cricket-ivory">Zola</a>
+      Design heavily inspired from <a href="https://www.zola.com/wedding-planning/website/design/cricket-ivory" target="_blank">Zola</a>
     </footer>
   </div>
 </template>
@@ -67,7 +67,6 @@ main .view-header{
 
 header {
   margin: 0;
-  height: 56px;
   padding: 0 16px 0 24px;
   /* background-color: #35495e; */
   color:gray;
@@ -97,15 +96,15 @@ header span {
 
 .couple {
   padding-top: 1rem;
-  font-size: 25px;
+  font-size: 2rem;
 }
 .center {
   margin: auto;
-  width: 25%;
+  width: 21rem;
 }
 
 .wedding-header{
-  font-size: 12px;
+  font-size: .7rem;
 }
 
 .navigation ul {
@@ -116,7 +115,8 @@ header span {
   width: 75%;
   margin: auto;
   font-size: 12px;
-
+  text-align: center;
+  padding-top: 2rem;
 }
 .navigation li {
 }

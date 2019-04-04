@@ -3,8 +3,7 @@
     <h1 class='view-header'>{{ msg }}</h1>
     <!-- <h2>Latest announcements</h2> -->
     <div
-      class='pa-carousel-widget'
-      style='width:100%; height:480px; display:none;'
+      class='pa-carousel-widget photos center'
       data-link='https://photos.app.goo.gl/uChMgVnHRHjmWeYv2'
       data-title='Katherine and Kemari Engagement'
       data-description='35 new photos added to shared album'>
@@ -85,5 +84,11 @@ li {
 
 a {
   color: #35495e;
+}
+
+.photos {
+  height: 25rem;
+  width:100%; 
+  display:none;
 }
 </style>

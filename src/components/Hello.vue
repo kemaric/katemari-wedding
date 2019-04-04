@@ -1,6 +1,5 @@
 <template>
   <div class="view-header hello">
-    <!-- https://photos.google.com/share/AF1QipMDfEJLnSGnPU1rNlqHlWHlrWIam9Q4RF8uBo3cUGmaC8c-9Tce7kax8XsR2LacWg/photo/AF1QipOshjKKUEcaM_TWwAIGYAoBh7Sh6c03SOK21lZH?key=Q1VvdDZtSTZJVUJ2Tm9pNnk5SlU3ZkNhLVJoVmNR -->
     <h1>    
        <img class="cover-photo" src="static\img\engagement1.jpg" alt="Kemari and Katherine Engagement Pic">
     </h1>
