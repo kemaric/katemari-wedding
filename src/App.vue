@@ -8,7 +8,7 @@
       <div class="couple center">
         <span class="bride-groom-name">Katherine and Kemari</span>
       </div>
-      <div class="navigation">
+      <div id="myHeader" class="header-navigation navigation">
             <!-- use router-link component for navigation. -->
             <!-- specify the link by passing the `to` prop. -->
             <!-- <router-link> will be rendered as an `<a>` tag by default -->
@@ -25,7 +25,7 @@
           </ul>
       </div>
     </header>
-    <main>
+    <main class="content">
       <!-- <img src="./assets/logo.png" alt="Vue.js PWA"> -->
       <!-- route outlet -->
       <!-- component matched by the route will render here -->
@@ -41,6 +41,20 @@
 <script>
 export default {
   name: 'app',
+  mounted() {
+    const header = document.getElementById('myHeader');
+    const sticky = header.offsetTop;
+
+    function myFunction() {
+      if (window.pageYOffset > sticky) {
+        header.classList.add('sticky');
+      } else {
+        header.classList.remove('sticky');
+      }
+    }
+
+    window.onscroll = () => myFunction();
+  },
 };
 </script>
 <style>
@@ -63,13 +77,13 @@ main {
   /* text-align: center; */
   margin-top: 40px;
 }
-main .view-header{
+main .view-header {
     text-align: center;
 }
 
 header {
   margin: 0;
-  padding: 0 16px 0 24px;
+  /* padding: 0 16px 0 24px; */
   /* background-color: #35495e; */
   color:gray;
 }
@@ -133,5 +147,35 @@ header span {
 .navigation li a:hover {
   /* background-color: #111111; */
   color:red
+}
+
+/**
+* Stickey Header styles
+**/
+/* Style the header */
+.header-navigation {
+  color: #f1f1f1;
+}
+
+/* Page content */
+.content {
+  /* padding: 16px; */
+}
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 3;
+  opacity: 0.6;
+  background: #000;
+      padding-bottom: 1rem;
+
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 102px;
 }
 </style>
