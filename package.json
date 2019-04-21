@@ -12,9 +12,10 @@
     "e2e": "node test/e2e/runner.js",
     "test": "npm run unit && npm run e2e",
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs",
-    "deploy": "aws s3 sync ./dist s3://katemari-wedding"
+    "deploy": "npm run build && aws s3 sync ./dist s3://katemari-wedding"
   },
   "dependencies": {
+    "@okta/okta-vue": "^1.1.0",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"
   },
