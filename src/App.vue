@@ -1,40 +1,46 @@
 <template>
   <div id="app">
-    <header>
-      <div class="container wedding-header">
-        <span class="left wedding-date">November 2, 2019</span>
-        <span class="right wedding-hashtag">#KATEMARIWEDDING</span>
+    <div>
+      <a href="#" v-if="!activeUser" @click.prevent="login">Login</a>
+      <div v-else>
+        Welcome {{ activeUser.email }} - <a href="#" @click.prevent="logout">Logout</a>
       </div>
-      <div class="couple center">
-        <span class="bride-groom-name">Katherine and Kemari</span>
-      </div>
-      <div id="myHeader" class="header-navigation navigation">
-            <!-- use router-link component for navigation. -->
-            <!-- specify the link by passing the `to` prop. -->
-            <!-- <router-link> will be rendered as an `<a>` tag by default -->
-          <ul>
-            <li><router-link to="/">Home</router-link></li>
-            <li><router-link to="/party">Wedding Party</router-link></li>
-            <li><router-link to="/photos">Photos</router-link></li>
-            <li><router-link to="/registry">Registry</router-link></li>
-            <li><router-link to="/songs">Song Requests</router-link></li>
-            <li><router-link to="/venue">Venue</router-link></li>
-            <li><router-link to="/news">Annuncements</router-link></li>
-            <li><router-link to="/faq">FAQ</router-link></li>
-            <li><router-link to="/rsvp">RSVP</router-link></li>
-          </ul>
-      </div>
-    </header>
-    <main class="content">
-      <!-- <img src="./assets/logo.png" alt="Vue.js PWA"> -->
-      <!-- route outlet -->
-      <!-- component matched by the route will render here -->
-      <router-view></router-view>
-    </main>
-    <footer>
-      Made with love by Kemari
-      Design heavily inspired from <a href="https://www.zola.com/wedding-planning/website/design/cricket-ivory" target="_blank">Zola</a>
-    </footer>
+      <header>
+          <div class="container wedding-header">
+            <span class="left wedding-date">November 2, 2019</span>
+            <span class="right wedding-hashtag">#KATEMARIWEDDING</span>
+          </div>
+          <div class="couple center">
+            <span class="bride-groom-name">Katherine and Kemari</span>
+          </div>
+          <div id="myHeader" class="header-navigation navigation">
+                <!-- use router-link component for navigation. -->
+                <!-- specify the link by passing the `to` prop. -->
+                <!-- <router-link> will be rendered as an `<a>` tag by default -->
+              <ul>
+                <li><router-link to="/">Home</router-link></li>
+                <li><router-link to="/party">Wedding Party</router-link></li>
+                <li><router-link to="/photos">Photos</router-link></li>
+                <li><router-link to="/registry">Registry</router-link></li>
+                <li><router-link to="/songs">Song Requests</router-link></li>
+                <li><router-link to="/venue">Venue</router-link></li>
+                <li><router-link to="/news">Annuncements</router-link></li>
+                <li><router-link to="/faq">FAQ</router-link></li>
+                <li><router-link to="/rsvp">RSVP</router-link></li>
+              </ul>
+          </div>
+        </header>
+        <main class="content">
+          <!-- <img src="./assets/logo.png" alt="Vue.js PWA"> -->
+          <!-- route outlet -->
+          <!-- component matched by the route will render here -->
+          <router-view></router-view>
+        </main>
+        <footer>
+          Made with love by Kemari
+          Design heavily inspired from <a href="https://www.zola.com/wedding-planning/website/design/cricket-ivory" target="_blank">Zola</a>
+        </footer>
+	  </div>
   </div>
 </template>
 
@@ -42,18 +48,48 @@
 export default {
   name: 'app',
   mounted() {
-    const header = document.getElementById('myHeader');
-    const sticky = header.offsetTop;
-
-    function myFunction() {
-      if (window.pageYOffset > sticky) {
-        header.classList.add('sticky');
-      } else {
-        header.classList.remove('sticky');
+    function initNav() {
+      const header = document.getElementById('myHeader');
+      let sticky;
+      if (header) {
+        sticky = header.offsetTop;
       }
+      function myFunction() {
+        if (window.pageYOffset > sticky) {
+          header.classList.add('sticky');
+        } else {
+          header.classList.remove('sticky');
+        }
+      }
+      window.onscroll = () => myFunction();
     }
 
-    window.onscroll = () => myFunction();
+    initNav();
+  },
+  data() {
+    return {
+      activeUser: null,
+    };
+  },
+  async created() {
+    await this.refreshActiveUser();
+  },
+  watch: {
+    // everytime a route is changed refresh the activeUser
+    $route: 'refreshActiveUser',
+  },
+  methods: {
+    login() {
+      this.$auth.loginRedirect();
+    },
+    async refreshActiveUser() {
+      this.activeUser = await this.$auth.getUser();
+    },
+    async logout() {
+      await this.$auth.logout();
+      await this.refreshActiveUser();
+      this.$router.push('/');
+    },
   },
 };
 </script>
