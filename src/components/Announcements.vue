@@ -2,7 +2,15 @@
   <div class="view-header hello">
     <h1>{{ msg }}</h1>
     <!-- <h2>Latest announcements</h2> -->
-    <ul>
+    <ul class="announcement-list">
+      <li class="announcement" v-for='announcement in announcements' v-bind:key='announcement'>
+        <span> {{ announcement }}</span>
+      </li>
+      <li v-if='announcements.length === 0'> 
+        <span>
+          {{ noAnnouncement }}
+         </span> 
+      </li>
     </ul>
   </div>
 </template>
@@ -12,8 +20,10 @@ export default {
   name: 'announcements',
   data() {
     return {
-      msg: 'Stay tuned for upcoming #KatemariWedding Announcements...',
-      announcements: [],
+      msg: 'Latest announcements',
+      noAnnouncement: 'Stay tuned for upcoming #KatemariWedding Announcements...',
+      announcements: [
+      ],
     };
   },
 };
@@ -37,5 +47,10 @@ li {
 
 a {
   color: #35495E;
+}
+
+.announcement {
+  display: block;
+  padding: 1rem;
 }
 </style>
