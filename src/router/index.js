@@ -10,8 +10,8 @@ import Secure from '@/components/Secure';
 import Auth from '@okta/okta-vue';
 
 Vue.use(Auth, {
-  issuer: `${process.env.OKTA_URI_BASE}/oauth2/default`,
-  client_id: `${process.env.OKTA_CLIENT}`,
+  issuer: 'https://dev-696620.okta.com/oauth2/default',
+  client_id: '0oahqajr5iKCjYUO1356',
   redirect_uri: `${window.location.origin}/implicit/callback`,
   scope: 'openid profile email',
 });

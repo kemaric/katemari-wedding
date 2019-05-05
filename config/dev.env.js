@@ -6,6 +6,6 @@ const prodEnv = require('./prod.env');
 
 module.exports = merge(prodEnv, {
   NODE_ENV: '"development"',
-  OKTA_CLIENT: `"${process.env.VUE_APP_OKTA_CLIENT}"`,
-  OKTA_URI_BASE: `"${process.env.VUE_APP_OKTA_URI_BASE}"`,
+  OKTA_CLIENT: '"0oahqajr5iKCjYUO1356"',
+  OKTA_URI_BASE: '"https://dev-696620.okta.com"',
 });
