@@ -8,6 +8,7 @@ import Photos from '@/components/Photos';
 import NotFound from '@/components/NotFound';
 import Secure from '@/components/Secure';
 import Auth from '@okta/okta-vue';
+import SaveDate from '@/components/SaveDate';
 
 Vue.use(Auth, {
   issuer: 'https://dev-696620.okta.com/oauth2/default',
@@ -35,6 +36,7 @@ const routes = [
   },
   { path: '/photos', name: 'Weddding Feed', component: Photos },
   { path: '/news', name: 'Announcements', component: Announcements },
+  { path: '/date', name: 'Save The Date', component: SaveDate },
   { path: '/party', component: Construction },
   { path: '/registry', component: Construction, meta: { requiresAuth: true } },
   { path: '/songs', component: Construction },

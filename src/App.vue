@@ -19,6 +19,7 @@
                 <!-- <router-link> will be rendered as an `<a>` tag by default -->
               <ul>
                 <li><router-link to="/">Home</router-link></li>
+                <li><router-link to="/date">Save The Date</router-link></li>
                 <li><router-link to="/party">Wedding Party</router-link></li>
                 <li><router-link to="/photos">Photos</router-link></li>
                 <li><router-link to="/registry">Registry</router-link></li>
@@ -186,8 +187,8 @@ header span {
   text-align: center;
   padding-top: 2rem;
 }
-.navigation li {
-}
+/* .navigation li {
+} */
 .navigation li a {
   display: block;
   color: gray;
