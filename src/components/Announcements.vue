@@ -1,6 +1,6 @@
 <template>
   <div class="view-header hello">
-    <h1>{{ msg }}</h1>
+    <h1 class="component-head">{{ msg }}</h1>
     <!-- <h2>Latest announcements</h2> -->
     <ul class="announcement-list">
       <li class="announcement" v-for='announcement in announcements' v-bind:key='announcement'>
@@ -31,23 +31,23 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
-h1, h2 {
+.component-head {
   font-weight: normal;
 }
 
-ul {
+.announcement-list {
   list-style-type: none;
   padding: 0;
 }
 
-li {
+/* li {
   display: inline-block;
   margin: 0 10px;
-}
+} */
 
-a {
+/* a {
   color: #35495E;
-}
+} */
 
 .announcement {
   display: block;
