@@ -9,6 +9,7 @@
       data-description='35 new photos added to shared album'>
         <img v-for='pic in engagement.original' v-bind:key='pic' v-bind:data-src='pic' src='' alt=''>
     </div>
+    <div> <p>Credit: Emily Fiumenero. Cousin of the Bride.</p> </div>
 
   </div>
 </template>
@@ -19,7 +20,7 @@ export default {
   name: 'photos',
   data() {
     return {
-      msg: 'Engagement Pictures',
+      msg: 'Fall 2017 Engagement Pictures',
       engagement: {
         original: [
           'https://lh3.googleusercontent.com/eq1qmtYr5-Av2CBAiOmwZy474LIl_RYmgotSPSz1BY20EEHsU3Z7NV0YVJFEJ0DlH3KMkx4VR2JXAq4KkqBLRrypuStY9fGQCh8TKjVSeQUDw4gMvioeyR5PF8Z50AzaSS2rrizWdzI=w1920-h1080',
