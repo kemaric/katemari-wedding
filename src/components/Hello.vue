@@ -4,9 +4,15 @@
        <img class="cover-photo" src="static\img\engagement1.jpg" alt="Kemari and Katherine Engagement Pic">
     </h1>
      <div class="section wedding-couple-names">
-      <h1>Katherine Campanile</h1>
-      <h3>AND</h3>
-      <h1>Kemari Legg</h1>
+       <span>
+          <img class="logo floatLeft" src="static/img/plant-left.png">
+          <img  class="logo floatRight" src="static/img/plant.png">
+          <div class="main-name">
+            <h1>Katherine Campanile</h1>
+            <h3>AND</h3>
+            <h1>Kemari Legg</h1>
+          </div>     
+       </span>      
     </div>
     <!-- TODO: Add Div for the Wedding Date, Hashtag, and location -->
     <div class="section wedding-meet">
@@ -18,6 +24,7 @@
       <h2>The Proposal</h2>
       <h3>October 27th, 2017</h3>
       <p>Months earlier Kemari contacted the band Misterwives for the plan of a lifetime...</p>
+      <iframe src="https://drive.google.com/file/d/1BaY8GKP1dmeUxVexJnqBmfjiASxRruSG/preview" width="640" height="480"></iframe>
     </div>
      <h1>    
        <img class="cover-photo" src="static\img\engagement-footer-1.jpg" alt="Kemari and Katherine Engagement Pic">
@@ -62,4 +69,24 @@ a {
 .section {
 padding: 5rem;
 }
+
+ .logo {
+        /* width: 150px; */
+        max-width: 27vw;
+        z-index: -16;
+    }
+    
+    .main-name {
+        height: 120px;
+        vertical-align: middle;
+        text-align: center; 
+    }
+    
+    .floatLeft { float: left; }
+    
+    .floatRight { float: right; }
+    
+
+
 </style>
+

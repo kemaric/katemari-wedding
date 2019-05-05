@@ -37,8 +37,24 @@
           <router-view></router-view>
         </main>
         <footer>
-          Made with love by Kemari
-          Design heavily inspired from <a href="https://www.zola.com/wedding-planning/website/design/cricket-ivory" target="_blank">Zola</a>
+           <div class="inline">
+                <span class="">Made with love by Kemari</span>
+                <div class="wedding-social right inline"> 
+                  <a class="social" target="_blank" href="https://www.instagram.com/explore/tags/katemariwedding/" aria-label="KatemariWedding Instagram">
+                    <img src="https://image.flaticon.com/icons/svg/174/174855.svg">
+                  </a>
+                  <a class="social" target="_blank" href="https://www.facebook.com/hashtag/katemariwedding/" aria-label="KatemariWedding Instagram">
+                    <img src="https://image.flaticon.com/icons/svg/174/174848.svg">
+                  </a>
+                  <a class="social" target="_blank" href="https://twitter.com/hashtag/katemariwedding/" aria-label="KatemariWedding Instagram">
+                    <img src="https://image.flaticon.com/icons/svg/1409/1409937.svg">
+                  </a>
+                </div>
+                
+                <span class="">
+                  Design heavily inspired from <a href="https://www.zola.com/wedding-planning/website/design/cricket-ivory" target="_blank">Zola</a>
+                </span>
+          </div>
         </footer>
 	  </div>
   </div>
@@ -213,5 +229,13 @@ header span {
 /* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
 .sticky + .content {
   padding-top: 102px;
+}
+
+.social img {
+  width: 1.5rem;
+}
+
+.inline {
+  display: inline-block;
 }
 </style>

@@ -10,15 +10,11 @@ import Secure from '@/components/Secure';
 import Auth from '@okta/okta-vue';
 
 Vue.use(Auth, {
-  issuer: 'https://dev-696620.okta.com/oauth2/default',
-  // issuer: `${process.env.OKTA_URI_BASE}/oauth2/default`,
-  // client_id: `${process.env.OKTA_CLIENT}`,
-  client_id: '0oahqajr5iKCjYUO1356',
+  issuer: `${process.env.OKTA_URI_BASE}/oauth2/default`,
+  client_id: `${process.env.OKTA_CLIENT}`,
   redirect_uri: `${window.location.origin}/implicit/callback`,
   scope: 'openid profile email',
 });
-// eslint-disable-next-line
-console.log('Env', process.env.NODE_ENV);
 
 Vue.use(VueRouter);
 
