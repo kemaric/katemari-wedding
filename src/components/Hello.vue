@@ -24,7 +24,7 @@
       <h2>The Proposal</h2>
       <h3>October 27th, 2017</h3>
       <p>Months earlier Kemari contacted the band Misterwives for the plan of a lifetime...</p>
-      <iframe src="https://drive.google.com/file/d/1BaY8GKP1dmeUxVexJnqBmfjiASxRruSG/preview" width="640" height="480"></iframe>
+      <iframe class="wedding-proposal-video" src="https://drive.google.com/file/d/1BaY8GKP1dmeUxVexJnqBmfjiASxRruSG/preview" width="640" height="480"></iframe>
     </div>
      <h1>    
        <img class="cover-photo" src="static\img\engagement-footer-1.jpg" alt="Kemari and Katherine Engagement Pic">
@@ -71,13 +71,11 @@ padding: 5rem;
 }
 
  .logo {
-        /* width: 150px; */
         max-width: 27vw;
         z-index: -16;
     }
     
     .main-name {
-        height: 120px;
         vertical-align: middle;
         text-align: center; 
     }
@@ -86,6 +84,11 @@ padding: 5rem;
     
     .floatRight { float: right; }
     
+    .wedding-proposal-video {
+      max-width: 75vw;
+    max-height: 50vw;
+}
+
 
 
 </style>
