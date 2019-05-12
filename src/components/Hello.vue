@@ -67,7 +67,9 @@ a {
   max-width: 100%; height: auto;
 }
 .section {
-padding: 5rem;
+padding-top: 5rem;
+padding-left: 1rem;
+padding-right: 1rem;
 }
 
  .logo {

@@ -1,9 +1,11 @@
 <template>
   <div id="app">
     <div>
-      <a href="#" v-if="!activeUser" @click.prevent="login">Login</a>
-      <div v-else>
-        Welcome {{ activeUser.email }} - <a href="#" @click.prevent="logout">Logout</a>
+      <div class="login-head">
+        <a  href="#" v-if="!activeUser" @click.prevent="login">Login</a>
+        <div v-else>
+          Welcome {{ activeUser.email }} - <a href="#" @click.prevent="logout">Logout</a>
+        </div>
       </div>
       <header>
           <div class="container wedding-header">
@@ -38,7 +40,7 @@
           <router-view></router-view>
         </main>
         <footer>
-           <div class="inline">
+           <div class="footer inline">
                 <span class="">Made with love by Kemari</span>
                 <div class="wedding-social right inline"> 
                   <a class="social" target="_blank" href="https://www.instagram.com/explore/tags/katemariwedding/" aria-label="KatemariWedding Instagram">
@@ -156,6 +158,9 @@ header span {
   bottom: 0;
   margin: 0 5px 5px 5px;
 }
+.login-head {
+  margin: 0 5px 5px 5px;
+}
 .left {
   float: left;
 }
@@ -238,5 +243,9 @@ header span {
 
 .inline {
   display: inline-block;
+}
+
+.footer {
+    margin: 0 1rem 1rem 1rem;
 }
 </style>
