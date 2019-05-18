@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-
 import Hello from '@/components/Hello';
+import WeddingParty from '@/components/WeddingParty';
 import Announcements from '@/components/Announcements';
 import Construction from '@/components/Construction';
 import Photos from '@/components/Photos';
@@ -37,12 +37,12 @@ const routes = [
   { path: '/photos', name: 'Weddding Feed', component: Photos },
   { path: '/news', name: 'Announcements', component: Announcements },
   { path: '/date', name: 'Save The Date', component: SaveDate },
-  { path: '/party', component: Construction },
-  { path: '/registry', component: Construction, meta: { requiresAuth: true } },
+  { path: '/party', component: WeddingParty },
+  { path: '/registry', component: Construction, meta: { requiresAuth: false } },
   { path: '/songs', component: Construction },
   { path: '/venue', component: Construction },
   { path: '/faq', component: Construction },
-  { path: '/rsvp', component: Construction, meta: { requiresAuth: true } },
+  { path: '/rsvp', component: Construction, meta: { requiresAuth: false } },
   { path: '/404', component: NotFound },
   { path: '*', component: NotFound, redirect: '/404' },
 

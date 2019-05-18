@@ -17,14 +17,16 @@
     <!-- TODO: Add Div for the Wedding Date, Hashtag, and location -->
     <div class="section wedding-meet">
       <h2>How We Met</h2>
-      <h3>August 13th, 2013</h3>
-      <p>It all started with an "About Me" and Firefly...</p>
+      <h3> {{ meeting.date }} </h3>
+      <p>
+        {{ meeting.summary }}
+      </p>
     </div>
     <div class="section wedding-proposal">
       <h2>The Proposal</h2>
-      <h3>October 27th, 2017</h3>
-      <p>Months earlier Kemari contacted the band Misterwives for the plan of a lifetime...</p>
-      <iframe class="wedding-proposal-video" src="https://drive.google.com/file/d/1BaY8GKP1dmeUxVexJnqBmfjiASxRruSG/preview" width="640" height="480"></iframe>
+      <h3>{{ proposal.date }}</h3>
+      <p>{{ proposal.summary }}</p>
+      <iframe class="wedding-proposal-video" v-bind:src='proposal.asset' width="640" height="480"></iframe>
     </div>
      <h1>    
        <img class="cover-photo" src="static\img\engagement-footer-1.jpg" alt="Kemari and Katherine Engagement Pic">
@@ -39,6 +41,17 @@ export default {
   data() {
     return {
       msg: 'Welcome to Your Vue.js PWA',
+      meeting: {
+        date: 'August 13th, 2013',
+        summary: 'It all started with an “About Me” and Firefly.  Katherine and Kemari originally met on a dating website (very modern), all because Kemari wanted to hear about Katherine’s time at the previous years Firefly Music Festival, and he might admit that he was a bit jealous.  They ended up hitting it off, went on their first date in August of 2013, and after a brief period of dating they decided to go steady and on September 18, 2013 they made it Facebook official.  As years passed Kemari and Katherine continued to share together their love of music, camping, and sharing adventures together.',
+        asset: '',
+      },
+      proposal: {
+        date: 'October 27th, 2017',
+        summary: 'Months earlier Kemari contacted the band Misterwives for the plan of a lifetime. When Kemari knew it was the time to propose to Katherine, he reached out to the lead singer of Mistervives to help make the proposal happen. After Kemari met up with the band to hash out the plans, he took Katherine to the concert along with two of his friends in on the secret. As the band finhshed up the first encore of “I Love You Always Forever”, Kemari snunck backstage to surprise Katherine with the proposal.',
+        asset: 'https://drive.google.com/file/d/1BaY8GKP1dmeUxVexJnqBmfjiASxRruSG/preview',
+      },
+
     };
   },
 };
