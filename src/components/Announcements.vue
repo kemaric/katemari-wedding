@@ -23,6 +23,7 @@ export default {
       msg: 'Latest announcements',
       noAnnouncement: 'Stay tuned for upcoming #KatemariWedding Announcements...',
       announcements: [
+        'The wedding Save the Dates have been sent out!'
       ],
     };
   },
