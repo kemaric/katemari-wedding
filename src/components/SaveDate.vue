@@ -1,6 +1,6 @@
 <template>
   <div class="view-header hello">
-    <h1>{{ msg }}</h1>
+    <img src="/static/img/Katherine-and-Kemari-Save-the-Date.jpg" class="responsive">
   </div>
 </template>
 
@@ -17,4 +17,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
+.responsive {
+  max-width: 100%;
+  height: auto; }
 </style>

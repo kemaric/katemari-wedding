@@ -112,7 +112,7 @@ export default {
   },
 };
 </script>
-<style>
+<style scroped lang="scss">
 /* TODO: Move this to a Sass file */
 body {
   margin: 0;
@@ -181,32 +181,44 @@ header span {
   font-size: .7rem;
 }
 
-.navigation ul {
+.header-navigation ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  width: 75%;
   margin: auto;
   font-size: 12px;
   text-align: center;
   padding-top: 2rem;
 }
-/* .navigation li {
-} */
-.navigation li a {
+.navigation li {
+  display: inline-block;
+  width: fit-content;
+}
+.header-navigation li a {
   display: block;
   color: gray;
   text-align: center;
-  /* padding: 16px; */
   text-decoration: none;
+  
+  &:hover {
+    color:red
+  }
+
+  &.is-active {
+    text-decoration: underline;
+  }
 }
 
-.navigation li a:hover {
+.header-navigation li a:hover {
   /* background-color: #111111; */
   color:red
 }
+.header-navigation li a:active {
+  /* color: blue; */
+  text-decoration: underline;
 
+}
 /**
 * Stickey Header styles
 **/
