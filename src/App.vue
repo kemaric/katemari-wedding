@@ -1,12 +1,12 @@
 <template>
   <div id="app">
     <div>
-      <div class="login-head">
+      <!-- <div class="login-head">
         <a  href="#" v-if="!activeUser" @click.prevent="login">Login</a>
         <div v-else>
           Welcome {{ activeUser.email }} - <a href="#" @click.prevent="logout">Logout</a>
         </div>
-      </div>
+      </div> -->
       <header>
           <div class="container wedding-header">
             <span class="left wedding-date">November 2, 2019</span>

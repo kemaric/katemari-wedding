@@ -1,7 +1,7 @@
 <template>
   <div class='view-header hello party-container'>
     <div class='bridal-party-container'>
-      <div class='bridal-party-member' v-for='member in party.bride' v-bind:key='member.name'>
+      <div class='party-member' v-for='member in party.bride' v-bind:key='member.name'>
         <div class="inline" v-if='member.images.length >= 1'>
           <img v-for='pic in member.images' v-bind:key='pic' v-bind:src='pic' v-bind:alt='member.name'>
         </div>
@@ -11,7 +11,14 @@
       </div>
     </div>
     <div class='groom-party-container'>
+      <div class='party-member' v-for='member in party.groom' v-bind:key='member.name'>
+        <div class="inline" v-if='member.images.length >= 1'>
+          <img v-for='pic in member.images' v-bind:key='pic' v-bind:src='pic' v-bind:alt='member.name'>
+        </div>
+        <div class='party-member-name'> {{ member.name }} </div>
+        <div  class='party-member-details'> {{ member.details }} </div>
 
+      </div>
     </div>
   </div>
 </template>
@@ -64,7 +71,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
-.bridal-party-member {
+.party-member {
   padding-top:2rem; 
 }
 .party-member-name {
