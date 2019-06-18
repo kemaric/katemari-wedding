@@ -84,7 +84,7 @@ export default {
       font-weight: bold;
     }
     .party-member-pic {
-      max-width: 50rem;
+      max-width: 20rem;
       height: auto;  width: 100%;
     }
   }
