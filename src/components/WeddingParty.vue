@@ -3,7 +3,7 @@
     <div class='bridal-party-container'>
       <div class='party-member' v-for='member in party.bride' v-bind:key='member.name'>
         <div class="inline" v-if='member.images.length >= 1'>
-          <img v-for='pic in member.images' v-bind:key='pic' v-bind:src='pic' v-bind:alt='member.name'>
+          <img class="party-member-pic" v-for='pic in member.images' v-bind:key='pic' v-bind:src='pic' v-bind:alt='member.name'>
         </div>
         <div class='party-member-name'> {{ member.name }} </div>
         <div  class='party-member-details'> {{ member.details }} </div>
@@ -13,7 +13,7 @@
     <div class='groom-party-container'>
       <div class='party-member' v-for='member in party.groom' v-bind:key='member.name'>
         <div class="inline" v-if='member.images.length >= 1'>
-          <img v-for='pic in member.images' v-bind:key='pic' v-bind:src='pic' v-bind:alt='member.name'>
+          <img class="party-member-pic" v-for='pic in member.images' v-bind:key='pic' v-bind:src='pic' v-bind:alt='member.name'>
         </div>
         <div class='party-member-name'> {{ member.name }} </div>
         <div  class='party-member-details'> {{ member.details }} </div>
@@ -49,21 +49,21 @@ export default {
     },
     initBridalParty() {
       this.party.bride.push(
-        this.partyMemberFactory('emily', 'Emily Fiumenero', 'Cousin of the bride'));
+        this.partyMemberFactory('emily', 'Emily Fiumenero', 'Cousin of the bride', 2));
       this.party.bride.push(
-        this.partyMemberFactory('rayley', 'Rayley Hunton', 'Childhood best friend of the bride'));
+        this.partyMemberFactory('rayley', 'Rayley Hunton', 'Childhood best friend of the bride', 2));
       this.party.bride.push(
-        this.partyMemberFactory('aj', 'AJ Kiser', 'Best friend of the bride since college'));
+        this.partyMemberFactory('aj', 'AJ Kiser', 'Best friend of the bride since college', 2));
     },
     initGroopParty() {
       this.party.groom.push(
-        this.partyMemberFactory('husani', 'Husani Hylton', 'Brother of the groom'));
+        this.partyMemberFactory('husani', 'Husani Hylton', 'Brother of the groom', 2));
       this.party.groom.push(
-        this.partyMemberFactory('jean', 'Jean Coo-Pay', 'Best friend of the groom since college'));
+        this.partyMemberFactory('jean', 'Jean Coo-Pay', 'Best friend of the groom since college', 2));
       this.party.groom.push(
-        this.partyMemberFactory('philip', 'Philip Gebret', 'Best friend of the groom since high school'));
+        this.partyMemberFactory('philip', 'Philip Gebret', 'Best friend of the groom since high school', 2));
       this.party.groom.push(
-        this.partyMemberFactory('cj', 'CJ B.', 'Best friend of the groom since high school'));
+        this.partyMemberFactory('cj', 'CJ B.', 'Best friend of the groom since high school', 2));
     },
   },
 };
@@ -72,6 +72,9 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .party-container {
+  * {
+  box-sizing: border-box;
+}
   padding-bottom: 2rem;
   
   .party-member {
@@ -80,7 +83,18 @@ export default {
     .party-member-name {
       font-weight: bold;
     }
+    .party-member-pic {
+      max-width: 50rem;
+      height: auto;  width: 100%;
+    }
   }
   
+}
+.bridal-party-container {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
 }
 </style>
