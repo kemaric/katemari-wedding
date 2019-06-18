@@ -25,14 +25,3 @@ $font-dir: "fonts/Majesti-Banner";
 @include font-face("Majesti Banner Light Italic", Majesti-Banner-LightItalic, $font-dir, "italic", initial);
 @include font-face("Majesti Banner Medium", Majesti-Banner-Medium, $font-dir, "normal", initial);
 @include font-face("Majesti Banner Medium Italic", Majesti-Banner-MediumItalic, $font-dir, "italic", initial);
-
-// @include font-face("Majesti Banner Bold", fonts/Majesti-Banner/Majesti-Banner-Bold, $font-dir);
-// @include font-face("Majesti Banner Bold Italic", fonts/Majesti-Banner/Majesti-Banner-BoldItalic);
-// @include font-face("Majesti Banner Book", fonts/Majesti-Banner/Majesti-Banner-Book);
-// @include font-face("Majesti Banner Book Italic", fonts/Majesti-Banner/Majesti-Banner-BookItalic);
-// @include font-face("Majesti Banner Heavy", fonts/Majesti-Banner/Majesti-Banner-Heavy);
-// @include font-face("Majesti Banner Heavy Italic", fonts/Majesti-Banner/Majesti-Banner-HeavyItalic);
-// @include font-face("Majesti Banner Light", fonts/Majesti-Banner/Majesti-Banner-Light);
-// @include font-face("Majesti Banner Light Italic", fonts/Majesti-Banner/Majesti-Banner-LightItalic);
-// @include font-face("Majesti Banner Medium", fonts/Majesti-Banner/Majesti-Banner-Medium);
-// @include font-face("Majesti Banner Medium Italic", fonts/Majesti-Banner/Majesti-Banner-MediumItalic);

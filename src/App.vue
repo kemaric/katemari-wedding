@@ -7,7 +7,7 @@
           Welcome {{ activeUser.email }} - <a href="#" @click.prevent="logout">Logout</a>
         </div>
       </div> -->
-      <header>
+      <header class="app-header">
           <div class="container wedding-header">
             <span class="left wedding-date">November 2, 2019</span>
             <span class="right wedding-hashtag">#KATEMARIWEDDING</span>
@@ -32,33 +32,32 @@
                 <li><router-link to="/rsvp">RSVP</router-link></li>
               </ul>
           </div>
-        </header>
-        <main class="content">
-          <!-- <img src="./assets/logo.png" alt="Vue.js PWA"> -->
-          <!-- route outlet -->
-          <!-- component matched by the route will render here -->
-          <router-view></router-view>
-        </main>
-        <footer>
-           <div class="footer inline">
-                <span class="">Made with love by Kemari</span>
-                <div class="wedding-social right inline"> 
-                  <a class="social" target="_blank" href="https://www.instagram.com/explore/tags/katemariwedding/" aria-label="KatemariWedding Instagram">
-                    <img src="https://image.flaticon.com/icons/svg/174/174855.svg">
-                  </a>
-                  <a class="social" target="_blank" href="https://www.facebook.com/hashtag/katemariwedding/" aria-label="KatemariWedding Instagram">
-                    <img src="https://image.flaticon.com/icons/svg/174/174848.svg">
-                  </a>
-                  <a class="social" target="_blank" href="https://twitter.com/hashtag/katemariwedding/" aria-label="KatemariWedding Instagram">
-                    <img src="https://image.flaticon.com/icons/svg/1409/1409937.svg">
-                  </a>
-                </div>
-                
-                <span class="">
-                  Design heavily inspired from <a href="https://www.zola.com/wedding-planning/website/design/cricket-ivory" target="_blank">Zola</a>
-                </span>
-          </div>
-        </footer>
+      </header>
+      <main class="content">
+        <!-- route outlet -->
+        <!-- component matched by the route will render here -->
+        <router-view></router-view>
+      </main>
+      <footer>
+          <div class="footer inline">
+              <span class="">Made with love by Kemari</span>
+              <div class="wedding-social right inline"> 
+                <a class="social" target="_blank" href="https://www.instagram.com/explore/tags/katemariwedding/" aria-label="KatemariWedding Instagram">
+                  <img src="https://image.flaticon.com/icons/svg/174/174855.svg">
+                </a>
+                <a class="social" target="_blank" href="https://www.facebook.com/hashtag/katemariwedding/" aria-label="KatemariWedding Instagram">
+                  <img src="https://image.flaticon.com/icons/svg/174/174848.svg">
+                </a>
+                <a class="social" target="_blank" href="https://twitter.com/hashtag/katemariwedding/" aria-label="KatemariWedding Instagram">
+                  <img src="https://image.flaticon.com/icons/svg/1409/1409937.svg">
+                </a>
+              </div>
+              
+              <span class="">
+                Design heavily inspired from <a href="https://www.zola.com/wedding-planning/website/design/cricket-ivory" target="_blank">Zola</a>
+              </span>
+        </div>
+      </footer>
 	  </div>
   </div>
 </template>
@@ -113,10 +112,11 @@ export default {
 };
 </script>
 <style scroped lang="scss">
+  @import url('./assets/css/styles.scss');
 /* TODO: Move this to a Sass file */
 body {
   margin: 0;
-  background-color: #faebd7;
+  background-color: #faebd785;
 }
 
 #app {
@@ -131,11 +131,11 @@ font-style:normal;
 main {
   /* text-align: center; */
   margin-top: 40px;
-}
-main .view-header {
+  .view-header {
     text-align: center;
+  } 
 }
-
+ 
 header {
   margin: 0;
   /* padding: 0 16px 0 24px; */

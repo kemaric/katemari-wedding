@@ -70,14 +70,17 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style>
-.party-member {
-  padding-top:2rem; 
-}
-.party-member-name {
-  font-weight: bold;
-}
+<style scoped lang="scss">
 .party-container {
   padding-bottom: 2rem;
+  
+  .party-member {
+    padding-top:2rem; 
+
+    .party-member-name {
+      font-weight: bold;
+    }
+  }
+  
 }
 </style>
