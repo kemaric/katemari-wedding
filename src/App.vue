@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div>
+    <div class="app-wrapper">
       <!-- <div class="login-head">
         <a  href="#" v-if="!activeUser" @click.prevent="login">Login</a>
         <div v-else>
@@ -126,6 +126,12 @@ body {
   /* color: #2c3e50; */
   font-weight:normal;
 font-style:normal;
+
+  .app-wrapper {
+     min-height: 100vh;
+    position: relative;
+    padding-bottom: 30px;
+  }
 }
 
 main {
@@ -259,5 +265,7 @@ header span {
 
 .footer {
     margin: 0 1rem 1rem 1rem;
+   position: absolute;
+   bottom: 0;
 }
 </style>
