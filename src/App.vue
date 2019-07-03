@@ -264,7 +264,6 @@ header span {
 }
 
 .footer {
-    margin: 0 1rem 1rem 1rem;
    position: absolute;
    bottom: 0;
 }
