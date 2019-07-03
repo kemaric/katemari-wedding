@@ -1,0 +1,27 @@
+$font-dir: "fonts/Majesti-Banner";
+@mixin font-face($family, $filename, $folder, $style, $weight){
+  @font-face {
+    font-family: $family;
+    // src: url('#{$folder}/#{$filename}.eot');
+    // src: url('#{$folder}/#{$filename}.eot?#iefix') format("embedded-opentype");
+    src: url('#{$folder}/#{$filename}.otf') format("opentype");
+    // src: url('#{$folder}/#{$filename}.woff') format("woff");
+    // src: url('#{$folder}/#{$filename}.ttf') format("truetype");
+    // src: url('#{$folder}/#{$filename}.svg#08bb4ba465a902745fc23c83a5d9fdc2') format("svg");
+    font-style: $style;
+    font-weight: $weight;
+  }
+}
+
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab|Open+Sans:400italic,700italic,400,700);
+
+@include font-face("Majesti Banner Bold", Majesti-Banner-Bold, $font-dir, "normal", initial);
+@include font-face("Majesti Banner Bold Italic", Majesti-Banner-BoldItalic, $font-dir, "italic", initial);
+@include font-face("Majesti Banner Book", Majesti-Banner-Book, $font-dir, "normal", normal);
+@include font-face("Majesti Banner Book Italic", Majesti-Banner-BookItalic, $font-dir, "italic", initial);
+@include font-face("Majesti Banner Heavy", Majesti-Banner-Heavy, $font-dir, "normal", initial);
+@include font-face("Majesti Banner Heavy Italic", Majesti-Banner-HeavyItalic, $font-dir, "italic", initial);
+@include font-face("Majesti Banner Light", Majesti-Banner-Light, $font-dir, "normal", initial);
+@include font-face("Majesti Banner Light Italic", Majesti-Banner-LightItalic, $font-dir, "italic", initial);
+@include font-face("Majesti Banner Medium", Majesti-Banner-Medium, $font-dir, "normal", initial);
+@include font-face("Majesti Banner Medium Italic", Majesti-Banner-MediumItalic, $font-dir, "italic", initial);

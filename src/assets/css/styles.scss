@@ -1,0 +1,42 @@
+@import url('fontface.scss');
+// $font-dir: "styles/fonts/";
+body {
+    font-family: "Majesti Banner Light";
+    margin: 0;
+    background-color: #faebd7;
+}
+.container {
+    position:relative;
+    bottom:0;
+    margin: 0 5px 5px 5px;
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+
+.wedding-couple-names{
+    .logo {
+        width: 150px;
+        height: 120px;
+        content: url(../logo.png);
+    }
+    
+    .main-name {
+        height: 120px;
+        vertical-align: middle;
+        text-align: center; 
+    }
+    
+    .floatLeft { float: left; }
+    
+    .floatRight { float: right; }
+    
+}
+
+.responsive {
+    max-width: 100%;
+    height: auto;
+  }

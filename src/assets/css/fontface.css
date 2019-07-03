@@ -1,0 +1,110 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab|Open+Sans:400italic,700italic,400,700);
+@font-face {
+  font-family: "Majesti Banner Bold";
+  src: url("fonts/Majesti-Banner/Majesti-Banner-Bold.eot");
+  src: url("fonts/Majesti-Banner/Majesti-Banner-Bold.eot?#iefix") format("embedded-opentype");
+  src: url("fonts/Majesti-Banner/Majesti-Banner-Bold.otf") format("opentype");
+  src: url("fonts/Majesti-Banner/Majesti-Banner-Bold.woff") format("woff");
+  src: url("fonts/Majesti-Banner/Majesti-Banner-Bold.ttf") format("truetype");
+  src: url("fonts/Majesti-Banner/Majesti-Banner-Bold.svg#08bb4ba465a902745fc23c83a5d9fdc2") format("svg");
+  font-style: "normal";
+  font-weight: initial; }
+
+@font-face {
+  font-family: "Majesti Banner Bold Italic";
+  src: url("fonts/Majesti-Banner/Majesti-Banner-BoldItalic.eot");
+  src: url("fonts/Majesti-Banner/Majesti-Banner-BoldItalic.eot?#iefix") format("embedded-opentype");
+  src: url("fonts/Majesti-Banner/Majesti-Banner-BoldItalic.otf") format("opentype");
+  src: url("fonts/Majesti-Banner/Majesti-Banner-BoldItalic.woff") format("woff");
+  src: url("fonts/Majesti-Banner/Majesti-Banner-BoldItalic.ttf") format("truetype");
+  src: url("fonts/Majesti-Banner/Majesti-Banner-BoldItalic.svg#08bb4ba465a902745fc23c83a5d9fdc2") format("svg");
+  font-style: "italic";
+  font-weight: initial; }
+
+@font-face {
+  font-family: "Majesti Banner Book";
+  src: url("fonts/Majesti-Banner/Majesti-Banner-Book.eot");
+  src: url("fonts/Majesti-Banner/Majesti-Banner-Book.eot?#iefix") format("embedded-opentype");
+  src: url("fonts/Majesti-Banner/Majesti-Banner-Book.otf") format("opentype");
+  src: url("fonts/Majesti-Banner/Majesti-Banner-Book.woff") format("woff");
+  src: url("fonts/Majesti-Banner/Majesti-Banner-Book.ttf") format("truetype");
+  src: url("fonts/Majesti-Banner/Majesti-Banner-Book.svg#08bb4ba465a902745fc23c83a5d9fdc2") format("svg");
+  font-style: "normal";
+  font-weight: normal; }
+
+@font-face {
+  font-family: "Majesti Banner Book Italic";
+  src: url("fonts/Majesti-Banner/Majesti-Banner-BookItalic.eot");
+  src: url("fonts/Majesti-Banner/Majesti-Banner-BookItalic.eot?#iefix") format("embedded-opentype");
+  src: url("fonts/Majesti-Banner/Majesti-Banner-BookItalic.otf") format("opentype");
+  src: url("fonts/Majesti-Banner/Majesti-Banner-BookItalic.woff") format("woff");
+  src: url("fonts/Majesti-Banner/Majesti-Banner-BookItalic.ttf") format("truetype");
+  src: url("fonts/Majesti-Banner/Majesti-Banner-BookItalic.svg#08bb4ba465a902745fc23c83a5d9fdc2") format("svg");
+  font-style: "italic";
+  font-weight: initial; }
+
+@font-face {
+  font-family: "Majesti Banner Heavy";
+  src: url("fonts/Majesti-Banner/Majesti-Banner-Heavy.eot");
+  src: url("fonts/Majesti-Banner/Majesti-Banner-Heavy.eot?#iefix") format("embedded-opentype");
+  src: url("fonts/Majesti-Banner/Majesti-Banner-Heavy.otf") format("opentype");
+  src: url("fonts/Majesti-Banner/Majesti-Banner-Heavy.woff") format("woff");
+  src: url("fonts/Majesti-Banner/Majesti-Banner-Heavy.ttf") format("truetype");
+  src: url("fonts/Majesti-Banner/Majesti-Banner-Heavy.svg#08bb4ba465a902745fc23c83a5d9fdc2") format("svg");
+  font-style: "normal";
+  font-weight: initial; }
+
+@font-face {
+  font-family: "Majesti Banner Heavy Italic";
+  src: url("fonts/Majesti-Banner/Majesti-Banner-HeavyItalic.eot");
+  src: url("fonts/Majesti-Banner/Majesti-Banner-HeavyItalic.eot?#iefix") format("embedded-opentype");
+  src: url("fonts/Majesti-Banner/Majesti-Banner-HeavyItalic.otf") format("opentype");
+  src: url("fonts/Majesti-Banner/Majesti-Banner-HeavyItalic.woff") format("woff");
+  src: url("fonts/Majesti-Banner/Majesti-Banner-HeavyItalic.ttf") format("truetype");
+  src: url("fonts/Majesti-Banner/Majesti-Banner-HeavyItalic.svg#08bb4ba465a902745fc23c83a5d9fdc2") format("svg");
+  font-style: "italic";
+  font-weight: initial; }
+
+@font-face {
+  font-family: "Majesti Banner Light";
+  src: url("fonts/Majesti-Banner/Majesti-Banner-Light.eot");
+  src: url("fonts/Majesti-Banner/Majesti-Banner-Light.eot?#iefix") format("embedded-opentype");
+  src: url("fonts/Majesti-Banner/Majesti-Banner-Light.otf") format("opentype");
+  src: url("fonts/Majesti-Banner/Majesti-Banner-Light.woff") format("woff");
+  src: url("fonts/Majesti-Banner/Majesti-Banner-Light.ttf") format("truetype");
+  src: url("fonts/Majesti-Banner/Majesti-Banner-Light.svg#08bb4ba465a902745fc23c83a5d9fdc2") format("svg");
+  font-style: "normal";
+  font-weight: initial; }
+
+@font-face {
+  font-family: "Majesti Banner Light Italic";
+  src: url("fonts/Majesti-Banner/Majesti-Banner-LightItalic.eot");
+  src: url("fonts/Majesti-Banner/Majesti-Banner-LightItalic.eot?#iefix") format("embedded-opentype");
+  src: url("fonts/Majesti-Banner/Majesti-Banner-LightItalic.otf") format("opentype");
+  src: url("fonts/Majesti-Banner/Majesti-Banner-LightItalic.woff") format("woff");
+  src: url("fonts/Majesti-Banner/Majesti-Banner-LightItalic.ttf") format("truetype");
+  src: url("fonts/Majesti-Banner/Majesti-Banner-LightItalic.svg#08bb4ba465a902745fc23c83a5d9fdc2") format("svg");
+  font-style: "italic";
+  font-weight: initial; }
+
+@font-face {
+  font-family: "Majesti Banner Medium";
+  src: url("fonts/Majesti-Banner/Majesti-Banner-Medium.eot");
+  src: url("fonts/Majesti-Banner/Majesti-Banner-Medium.eot?#iefix") format("embedded-opentype");
+  src: url("fonts/Majesti-Banner/Majesti-Banner-Medium.otf") format("opentype");
+  src: url("fonts/Majesti-Banner/Majesti-Banner-Medium.woff") format("woff");
+  src: url("fonts/Majesti-Banner/Majesti-Banner-Medium.ttf") format("truetype");
+  src: url("fonts/Majesti-Banner/Majesti-Banner-Medium.svg#08bb4ba465a902745fc23c83a5d9fdc2") format("svg");
+  font-style: "normal";
+  font-weight: initial; }
+
+@font-face {
+  font-family: "Majesti Banner Medium Italic";
+  src: url("fonts/Majesti-Banner/Majesti-Banner-MediumItalic.eot");
+  src: url("fonts/Majesti-Banner/Majesti-Banner-MediumItalic.eot?#iefix") format("embedded-opentype");
+  src: url("fonts/Majesti-Banner/Majesti-Banner-MediumItalic.otf") format("opentype");
+  src: url("fonts/Majesti-Banner/Majesti-Banner-MediumItalic.woff") format("woff");
+  src: url("fonts/Majesti-Banner/Majesti-Banner-MediumItalic.ttf") format("truetype");
+  src: url("fonts/Majesti-Banner/Majesti-Banner-MediumItalic.svg#08bb4ba465a902745fc23c83a5d9fdc2") format("svg");
+  font-style: "italic";
+  font-weight: initial; }

@@ -78,5 +78,5 @@ typings/
 *.njsproj
 *.sln
 
-# Ignore compiled files
-dist/
+# Compiled files
+dist
