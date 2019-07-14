@@ -3,7 +3,7 @@
     <h1 class="component-head">{{ msg }}</h1>
     <!-- <h2>Latest announcements</h2> -->
     <ul class="announcement-list">
-      <li class="announcement" v-for="announcement in announcements" v-bind:key="announcement">
+      <li class="announcement" v-for="announcement in announcements" v-bind:key="announcement.id">
         <span>{{ announcement.text }}</span>
       </li>
       <li v-if="announcements.length === 0">
@@ -53,18 +53,42 @@ export default {
       return query.onSnapshot((snapshot) => {
         snapshot.docChanges().forEach((change) => {
           if (change.type === 'removed') {
-            console.log('Entry removed', change.doc.id, change.doc.data());
-            // deleteMessage(change.doc.id);
+            console.debug('Entry removed', change.doc.id, change.doc.data());
+            this.deleteMessage(change.doc.id);
             return change.doc.data();
           }
           const message = change.doc.data();
-          console.log('Entry changed', change.doc.id, message);
+          console.debug('Entry changed', change.doc.id, message);
+          this.displayMessage(change.doc);
           return change.doc.data();
           // displayMessage(change.doc.id, message.timestamp, message.name,
           //               message.text, message.profilePicUrl, message.imageUrl);
         },
         );
       });
+    },
+    deleteMessage(docId) {
+      const docIndex = this.indexOfMessage(docId);
+      if (docIndex > -1) {
+        this.announcements.splice(docIndex, 1);
+      }
+    },
+    displayMessage(doc) {
+      const docIndex = this.indexOfMessage(doc.id);
+      if (docIndex > -1) {
+        this.announcements[docIndex] = doc;
+      } else {
+        this.announcements.push(doc);
+      }
+    },
+    indexOfMessage(docId) {
+      // eslint isnt allowing me to use ++ which is dumb
+      for (let i = 0; i < this.announcements.length; i += 1) {
+        if (this.announcements[i].doc && this.announcements[i].doc.id === docId) {
+          return i;
+        }
+      }
+      return -1;
     },
   },
 };
