@@ -59,7 +59,7 @@ export default {
           }
           const message = change.doc.data();
           console.debug('Entry changed', change.doc.id, message);
-          this.displayMessage(change.doc);
+          // this.displayMessage(change.doc);
           return change.doc.data();
           // displayMessage(change.doc.id, message.timestamp, message.name,
           //               message.text, message.profilePicUrl, message.imageUrl);
@@ -76,9 +76,9 @@ export default {
     displayMessage(doc) {
       const docIndex = this.indexOfMessage(doc.id);
       if (docIndex > -1) {
-        this.announcements[docIndex] = doc;
+        // this.announcements[docIndex] = doc;
       } else {
-        this.announcements.push(doc);
+        // this.announcements.push(doc);
       }
     },
     indexOfMessage(docId) {
