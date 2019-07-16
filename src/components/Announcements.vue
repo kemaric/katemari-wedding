@@ -14,12 +14,12 @@
 </template>
 
 <script>
-import { db } from '../main';
+import { db } from '../App';
 
 export default {
   name: 'announcements',
   mounted() {
-    this.loadNews();
+    // this.loadNews();
   },
   data() {
     return {

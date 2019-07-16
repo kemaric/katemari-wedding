@@ -63,6 +63,21 @@
 </template>
 
 <script>
+import Vue from 'vue';
+import { firestorePlugin } from 'vuefire';
+import firebase from 'firebase/app';
+import 'firebase/firestore';
+
+Vue.use(firestorePlugin);
+firebase.initializeApp({
+  projectId: 'katemariwedding-134ce',
+  databaseURL: 'https://katemariwedding-134ce.firebaseio.com',
+});
+export const db = firebase.firestore();
+// eslint-disable-next-line no-console
+console.debug('Firebase initialized', db);
+
+
 export default {
   name: 'app',
   mounted() {
@@ -111,7 +126,7 @@ export default {
   },
 };
 </script>
-<style scroped lang="scss">
+<style lang="scss">
   @import url('./assets/css/styles.scss');
 /* TODO: Move this to a Sass file */
 body {
