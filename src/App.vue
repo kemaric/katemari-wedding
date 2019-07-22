@@ -63,17 +63,9 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import { firestorePlugin } from 'vuefire';
-import firebase from 'firebase/app';
-import 'firebase/firestore';
+import * as tools from './helpers';
 
-Vue.use(firestorePlugin);
-firebase.initializeApp({
-  projectId: 'katemariwedding-134ce',
-  databaseURL: 'https://katemariwedding-134ce.firebaseio.com',
-});
-export const db = firebase.firestore();
+export const db = tools.fbDBConnection.firestore();
 // eslint-disable-next-line no-console
 console.debug('Firebase initialized', db);
 

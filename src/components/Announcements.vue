@@ -30,14 +30,11 @@ export default {
     };
   },
   firestore() {
-    if (db) {
-      return {
-        announcements: db
-          .collection('announcements')
-          .orderBy('date_made', 'desc'),
-      };
-    }
-    return { announcements: [] };
+    return {
+      announcements: db
+        .collection('announcements')
+        .orderBy('date_made', 'desc'),
+    };
   },
   methods: {
     loadNews() {
