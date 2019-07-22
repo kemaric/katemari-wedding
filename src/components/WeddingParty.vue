@@ -61,9 +61,9 @@ export default {
       this.party.groom.push(
         this.partyMemberFactory('jean', 'Jean Coo-Pay', 'Best friend of the groom since college', 1));
       this.party.groom.push(
-        this.partyMemberFactory('philip', 'Philip Gebret', 'Best friend of the groom since high school', 1));
+        this.partyMemberFactory('philip', 'Philipos Ghebretnsae', 'Best friend of the groom since high school', 1));
       this.party.groom.push(
-        this.partyMemberFactory('cj', 'CJ B.', 'Best friend of the groom since high school', 1));
+        this.partyMemberFactory('cj', 'Clifton Bathersfield', 'Best friend of the groom since high school', 1));
     },
   },
 };

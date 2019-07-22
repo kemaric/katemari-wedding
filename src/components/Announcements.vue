@@ -19,7 +19,6 @@ import { db } from '../App';
 export default {
   name: 'announcements',
   mounted() {
-    // this.loadNews();
   },
   data() {
     return {
