@@ -15,23 +15,7 @@
           <div class="couple center">
             <span class="bride-groom-name">Katherine and Kemari</span>
           </div>
-          <div id="myHeader" class="header-navigation navigation">
-                <!-- use router-link component for navigation. -->
-                <!-- specify the link by passing the `to` prop. -->
-                <!-- <router-link> will be rendered as an `<a>` tag by default -->
-              <ul>
-                <li><router-link to="/">Home</router-link></li>
-                <li><router-link to="/date">Save The Date</router-link></li>
-                <li><router-link to="/party">Wedding Party</router-link></li>
-                <li><router-link to="/photos">Photos</router-link></li>
-                <li><router-link to="/registry">Registry</router-link></li>
-                <li><router-link to="/songs">Song Requests</router-link></li>
-                <li><router-link to="/venue">Venue</router-link></li>
-                <li><router-link to="/news">Annuncements</router-link></li>
-                <li><router-link to="/faq">FAQ</router-link></li>
-                <li><router-link to="/rsvp">RSVP</router-link></li>
-              </ul>
-          </div>
+              <navigation id="myHeader"></navigation>
       </header>
       <main class="content">
         <!-- route outlet -->
@@ -63,6 +47,7 @@
 </template>
 
 <script>
+import Navigation from './components/Navigation';
 import * as tools from './helpers';
 
 export const db = tools.fbDBConnection.firestore();
@@ -72,6 +57,9 @@ console.debug('Firebase initialized', db);
 
 export default {
   name: 'app',
+  components: {
+    navigation: Navigation,
+  },
   mounted() {
     function initNav() {
       const header = document.getElementById('myHeader');
@@ -194,51 +182,6 @@ header span {
   font-size: .7rem;
 }
 
-.header-navigation ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  margin: auto;
-  font-size: 12px;
-  text-align: center;
-  padding-top: 2rem;
-}
-.navigation li {
-  display: inline-block;
-  width: fit-content;
-}
-.header-navigation li a {
-  display: block;
-  color: gray;
-  text-align: center;
-  text-decoration: none;
-  
-  &:hover {
-    color:red
-  }
-
-  &.is-active {
-    text-decoration: underline;
-  }
-}
-
-.header-navigation li a:hover {
-  /* background-color: #111111; */
-  color:red
-}
-.header-navigation li a:active {
-  /* color: blue; */
-  text-decoration: underline;
-
-}
-/**
-* Stickey Header styles
-**/
-/* Style the header */
-.header-navigation {
-  color: #f1f1f1;
-}
 
 /* Page content */
 .content {
