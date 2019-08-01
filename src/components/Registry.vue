@@ -26,12 +26,12 @@ export default {
       registries: [
         {
           name: 'Zola',
-          uri: 'https://www.zola.com',
+          uri: 'https://www.zola.com/registry/katemariwedding',
           pic: 'https://theme.zdassets.com/theme_assets/391437/f130fe46a6be787d2dd22ef2d138965d7848f47b.png',
         },
         {
           name: 'Bed Bath & Beyond',
-          uri: 'https://www.bedbathandbeyond.com/',
+          uri: 'https://www.bedbathandbeyond.com/store/giftregistry/viewregistryguest/547736021?eventType=Wedding',
           pic: 'https://seeklogo.com/images/B/Bed_Bath__and__Beyond-logo-61E5DF1BDF-seeklogo.com.png',
         },
       ],
