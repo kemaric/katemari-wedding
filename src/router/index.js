@@ -9,6 +9,7 @@ import NotFound from '@/components/NotFound';
 import Secure from '@/components/Secure';
 import Auth from '@okta/okta-vue';
 import SaveDate from '@/components/SaveDate';
+import Faq from '@/components/Faq';
 
 Vue.use(Auth, {
   issuer: 'https://dev-696620.okta.com/oauth2/default',
@@ -41,7 +42,7 @@ const routes = [
   { path: '/registry', component: Construction, meta: { requiresAuth: false } },
   { path: '/songs', component: Construction },
   { path: '/venue', component: Construction },
-  { path: '/faq', component: Construction },
+  { path: '/faq', component: Faq },
   { path: '/rsvp', component: Construction, meta: { requiresAuth: false } },
   { path: '/404', component: NotFound },
   { path: '*', component: NotFound, redirect: '/404' },
