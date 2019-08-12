@@ -4,7 +4,7 @@
     <!-- <h2>Latest announcements</h2> -->
     <ul class="announcement-list">
       <li class="announcement" v-for="announcement in announcements" v-bind:key="announcement.id">
-        <span>{{ announcement.text }}</span>
+        <span>{{ getDate(announcement) | formatDate }} : {{ announcement.text }}</span>
       </li>
       <li v-if="announcements.length === 0">
         <span>{{ noAnnouncement }}</span>
@@ -86,6 +86,12 @@ export default {
       }
       return -1;
     },
+    getDate(announcementDate) {
+      if (announcementDate.date_made && announcementDate.date_made.seconds) {
+        return new Date(announcementDate.date_made.seconds * 1000).toISOString();
+      }
+      return announcementDate.date_made.seconds;
+    },
   },
 };
 </script>
@@ -99,6 +105,7 @@ export default {
 .announcement-list {
   list-style-type: none;
   padding: 0;
+  text-align: center;
 }
 
 /* li {
@@ -112,6 +119,7 @@ export default {
 
 .announcement {
   display: block;
+  text-align: left;
   padding: 1rem;
 }
 </style>

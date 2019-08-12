@@ -2,9 +2,16 @@ import Vue from 'vue';
 import { firestorePlugin } from 'vuefire';
 import firebase from 'firebase/app';
 import 'firebase/firestore';
+import moment from 'moment';
+
 
 Vue.use(firestorePlugin);
-
+Vue.filter('formatDate', (value) => {
+  if (value) {
+    return moment(String(value)).format('MM/DD/YYYY hh:mm A');
+  }
+  return value;
+});
 
 export const myBoi = 'This is a test of an export.';
 
