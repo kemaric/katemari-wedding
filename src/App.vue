@@ -107,7 +107,10 @@ export default {
 };
 </script>
 <style lang="scss">
-  @import url('./assets/css/styles.scss');
+$fa-font-path : "~@fortawesome/fontawesome-free/webfonts";
+    @import "./node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
+    @import "./node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
+    @import url('~@/assets/css/styles.scss');
 /* TODO: Move this to a Sass file */
 body {
   margin: 0;
@@ -188,6 +191,10 @@ header span {
   /* padding: 16px; */
 }
 
+ /**
+  * Stickey Header styles
+  **/
+
 /* The sticky class is added to the header with JS when it reaches its scroll position */
 .sticky {
   position: fixed;
@@ -197,6 +204,14 @@ header span {
   opacity: 0.6;
   background: #000;
       padding-bottom: 1rem;
+  
+  /* Style the header */
+  &.header-navigation {
+    // color: red;
+    &:hover {
+    color: lavender;
+    }
+  }
 
 }
 

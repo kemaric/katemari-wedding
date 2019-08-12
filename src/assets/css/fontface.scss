@@ -13,7 +13,7 @@ $font-dir: "fonts/Majesti-Banner";
   }
 }
 
-@import url(http://fonts.googleapis.com/css?family=Roboto+Slab|Open+Sans:400italic,700italic,400,700);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab|Open+Sans:400italic,700italic,400,700);
 
 @include font-face("Majesti Banner Bold", Majesti-Banner-Bold, $font-dir, "normal", initial);
 @include font-face("Majesti Banner Bold Italic", Majesti-Banner-BoldItalic, $font-dir, "italic", initial);
