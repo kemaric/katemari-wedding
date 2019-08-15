@@ -51,6 +51,7 @@ import Navigation from './components/Navigation';
 import * as tools from './helpers';
 
 export const db = tools.fbDBConnection.firestore();
+db.enablePersistence();
 // eslint-disable-next-line no-console
 console.debug('Firebase initialized', db);
 

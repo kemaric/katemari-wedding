@@ -42,7 +42,7 @@ export default {
     padding: 0;
     overflow: hidden;
     margin: auto;
-    font-size: 12px;
+    font-size: 1.25rem;
     text-align: center;
     padding-top: 2rem;
     }
