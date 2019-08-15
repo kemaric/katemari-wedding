@@ -51,7 +51,20 @@ import Navigation from './components/Navigation';
 import * as tools from './helpers';
 
 export const db = tools.fbDBConnection.firestore();
-db.enablePersistence();
+db.enablePersistence().catch((err) => {
+  if (err.code === 'failed-precondition') {
+    // Multiple tabs open, persistence can only be enabled
+    // in one tab at a a time.
+    // ...
+    console.warn('Application with multiple tabs is not supported in current browser.\n',
+      'Please close one and refresh.');
+  } else if (err.code === 'unimplemented') {
+    // The current browser does not support all of the
+    // features required to enable persistence
+    // ...
+    console.warn('The current browser doesn\'t support multiple tabs.');
+  }
+});
 // eslint-disable-next-line no-console
 console.debug('Firebase initialized', db);
 
