@@ -9,6 +9,7 @@ import NotFound from '@/components/NotFound';
 import Secure from '@/components/Secure';
 import Auth from '@okta/okta-vue';
 import SaveDate from '@/components/SaveDate';
+import SongRequest from '@/components/SongRequest';
 import Faq from '@/components/Faq';
 import Registry from '@/components/Registry';
 // import Navigation from '@/components/Navigation';
@@ -41,8 +42,8 @@ const routes = [
   { path: '/news', name: 'Announcements', component: Announcements },
   { path: '/date', name: 'Save The Date', component: SaveDate },
   { path: '/party', component: WeddingParty },
+  { path: '/songs', component: SongRequest },
   { path: '/registry', component: Registry, meta: { requiresAuth: false } },
-  { path: '/songs', component: Construction },
   { path: '/venue', component: Construction },
   { path: '/faq', component: Faq },
   { path: '/rsvp', component: Construction, meta: { requiresAuth: false } },
