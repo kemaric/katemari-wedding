@@ -59,7 +59,7 @@ export default {
       this.party.groom.push(
         this.partyMemberFactory('husani', 'Husani Hylton', 'Brother of the groom', 1));
       this.party.groom.push(
-        this.partyMemberFactory('jean', 'Jean Coo-Pay', 'Best friend of the groom since college', 1));
+        this.partyMemberFactory('jean', 'Jean Coupet', 'Best friend of the groom since college', 1));
       this.party.groom.push(
         this.partyMemberFactory('philip', 'Philipos Ghebretnsae', 'Best friend of the groom since high school', 1));
       this.party.groom.push(
@@ -82,7 +82,7 @@ export default {
 
     .party-member-name {
       font-weight: bold;
-      font-family: "Avenir";
+      font-family: "Avenir"
     }
     .party-member-pic {
       max-width: 20rem;
