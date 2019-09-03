@@ -1,16 +1,32 @@
 <template>
   <div class='hello'>
-    <h1 class='view-header'>{{ msg }}</h1>
-    <!-- <h2>Latest announcements</h2> -->
-    <div
-      class='pa-carousel-widget photos center'
-      data-link='https://photos.app.goo.gl/uChMgVnHRHjmWeYv2'
-      data-title='Katherine and Kemari Engagement'
-      data-description='35 new photos added to shared album'>
-        <img v-for='pic in engagement.original' v-bind:key='pic' v-bind:data-src='pic' src='' alt=''>
-    </div>
-    <div> <p>Credit: Emily Fiumenero. Cousin of the Bride.</p> </div>
+    <h1 class='view-header container-text-font'> Spring 2019 Engagement Pictures </h1>
+    <div class="engagement-2019">
 
+      <div>
+        <img v-for='pic in engagement.official' v-bind:key='pic' v-bind:data-src='pic' :src='ENGAGEMENT_PHOTO_PREFIX+pic' v-bind:alt='ENGAGEMENT_PHOTO_PREFIX+pic'>
+      </div> 
+    </div>
+    <div class="credit">
+        <p>Credit:<a href="https://www.instagram.com/brittanydunbarphotography"> Brittany Dunbar Photography</a> 
+        <br>
+        https://www.brittanydunbarphotography.com/
+      </p>
+      </div>  
+    
+    <div class="engagement-2017">
+       <h1 class='view-header container-text-font'>{{ msg }}</h1>
+      <!-- <h2>Latest announcements</h2> -->
+      <div
+        class='pa-carousel-widget photos center'
+        data-link='https://photos.app.goo.gl/uChMgVnHRHjmWeYv2'
+        data-title='Katherine and Kemari Engagement'
+        data-description='35 new photos added to shared album'>
+          <img v-for='pic in engagement.original' v-bind:key='pic' v-bind:data-src='pic' src='' alt=''>
+      </div>
+      <div> <p>Credit: Emily Fiumenero. Cousin of the Bride.</p> </div>
+
+    </div>
   </div>
 </template>
 
@@ -59,8 +75,45 @@ export default {
           'https://lh3.googleusercontent.com/VJq2FtegAJGYDRoVvgx2_1UgkNby7QIzKYr7mAV4fX4nqi-_OM7688nXSra7bIJeNtb9q3RLGAxzs0XaSRxH1GIozwB4gqfpC5RBWT4tb-5yxiNjxWOtE-Zcm0kY_JYbXIIjZv2L_xc=w1920-h1080',
           'https://lh3.googleusercontent.com/p1acjjI78O5yWJtRKf-VQGiQ8MDWHH-y3n1IiFzFf3Y_0Gk33rKzSbmsboglEfaF5enhkrubYzUencXF9ibMQ8PcxYIRj27jKFt9C49xsT22IbzNvvopQwxIrwaTpAyK7xkQdmXpNiQ=w1920-h1080',
         ],
-        official: [],
+        official: ['112.jpg',
+          '107.jpg',
+          '123.jpg',
+          '101.jpg',
+          '100.jpg',
+          '57.jpg',
+          '121.jpg',
+          '113.jpg',
+          '67.jpg',
+          '124.jpg',
+          '55.jpg',
+          '58.jpg',
+          '47.jpg',
+          '93.jpg',
+          '11.jpg',
+          '69.jpg',
+          '25.jpg',
+          '76.jpg',
+          '36.jpg',
+          '35.jpg',
+          '46.jpg',
+          '68.jpg',
+          '72.jpg',
+          '20.jpg',
+          '21.jpg',
+          '5.jpg',
+          '78.jpg',
+          '70.jpg',
+          '22.jpg',
+          '90.jpg',
+          '77.jpg',
+          '4.jpg',
+          '14.jpg',
+          '87.jpg',
+          '7.jpg',
+          '29.jpg',
+        ],
       },
+      ENGAGEMENT_PHOTO_PREFIX: 'static/img/Engagement/KatherineKemariEngagement-',
     };
   },
   mounted() {
@@ -72,29 +125,45 @@ export default {
 </script>
 
 <!-- Add 'scoped' attribute to limit CSS to this component only -->
-<style  scoped lang="scss">
-/* h1,
-h2 {
-  font-weight: normal;
-} */
-
-/* ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
-} */
-
-/* a {
-  color: #35495e;
-} */
-
+<style scoped lang="scss">
 .photos {
   height: 25rem;
   width:100%; 
   display:none;
+}
+
+.engagement-2019 {
+  margin: .5vw;
+  font-size: 0;
+  display: -ms-flexbox;
+  -ms-flex-wrap: wrap; /* IE10 */
+  -ms-flexbox-wrap: wrap; /* IE10 */
+  -ms-flexbox-direction: column;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  display: -webkit-box;
+  display: flex;
+
+  div {
+    -webkit-box-flex: auto;
+    -ms-flex: auto;
+    flex: auto;
+    widows: 200px;
+    margin: .5vw;
+
+    img {
+      padding: .5rem;
+      height: auto;  width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .engagement-2019 {
+    div {
+      margin: 0;
+    }
+    padding: 0;
+  }
 }
 </style>
