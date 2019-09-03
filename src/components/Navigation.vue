@@ -63,6 +63,10 @@ export default {
 
     &.is-active {
         text-decoration: underline;
+        // color: #9BA17B;
+        color: #967BB6;
+        font-weight: bolder;
+
     }
     }
 
