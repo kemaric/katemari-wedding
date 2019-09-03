@@ -22,7 +22,7 @@ export default {
   },
   data() {
     return {
-      msg: 'Access our Bed Bath & Beyond and Zola registries here!',
+      msg: 'We have registries at the following stores:',
       registries: [
         {
           name: 'Zola',

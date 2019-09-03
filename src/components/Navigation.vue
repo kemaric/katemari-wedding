@@ -24,6 +24,7 @@ export default {
         { id: 4, text: 'Registry', page: '/registry' },
         { id: 5, text: 'Song Requests', page: '/songs' },
         { id: 6, text: 'Venue', page: '/venue' },
+        { id: 6, text: 'Travel', page: '/travel' },
         { id: 7, text: 'Annuncements', page: '/news' },
         { id: 8, text: 'FAQ', page: '/faq' },
         { id: 9, text: 'RSVP', page: '/rsvp' },
