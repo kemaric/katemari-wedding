@@ -40,3 +40,7 @@ body {
 
 .container-header-font {
   font-family: "Dancing Script"; }
+
+.component-head {
+  font-weight: normal;
+  font-family: "Avenir"; }

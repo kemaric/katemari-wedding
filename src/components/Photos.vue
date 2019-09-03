@@ -1,6 +1,6 @@
 <template>
   <div class='hello'>
-    <h1 class='view-header container-text-font'> Spring 2019 Engagement Pictures </h1>
+    <h1 class='view-header component-head'> Spring 2019 Engagement Pictures </h1>
     <div class="engagement-2019">
 
       <div>
@@ -15,7 +15,7 @@
       </div>  
     
     <div class="engagement-2017">
-       <h1 class='view-header container-text-font'>{{ msg }}</h1>
+       <h1 class='view-header component-head'>{{ msg }}</h1>
       <!-- <h2>Latest announcements</h2> -->
       <div
         class='pa-carousel-widget photos center'
@@ -126,6 +126,7 @@ export default {
 
 <!-- Add 'scoped' attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+
 .photos {
   height: 25rem;
   width:100%; 
@@ -166,4 +167,9 @@ export default {
     padding: 0;
   }
 }
+
+.component-head {
+    font-weight: normal;
+    font-family: "Avenir";
+  }
 </style>

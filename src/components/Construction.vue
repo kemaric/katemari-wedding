@@ -1,6 +1,6 @@
 <template>
   <div class="view-header hello">
-    <h1>{{ msg }}</h1>
+    <h1 class="component-head">{{ msg }}</h1>
   </div>
 </template>
 

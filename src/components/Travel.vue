@@ -39,4 +39,9 @@ export default {
   color: #fff!important;
   background-color: #616161!important;
 }
+.component-head {
+  font-weight: normal;
+      font-family: "Avenir";
+
+}
 </style>
