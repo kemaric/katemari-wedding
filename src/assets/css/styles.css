@@ -1,66 +1,8 @@
-@import url(http://fonts.googleapis.com/css?family=Roboto+Slab|Open+Sans:400italic,700italic,400,700);
-@font-face {
-  font-family: "Majesti Banner Bold";
-  src: url("fonts/Majesti-Banner/Majesti-Banner-Bold.otf") format("opentype");
-  font-style: "normal";
-  font-weight: initial; }
-
-@font-face {
-  font-family: "Majesti Banner Bold Italic";
-  src: url("fonts/Majesti-Banner/Majesti-Banner-BoldItalic.otf") format("opentype");
-  font-style: "italic";
-  font-weight: initial; }
-
-@font-face {
-  font-family: "Majesti Banner Book";
-  src: url("fonts/Majesti-Banner/Majesti-Banner-Book.otf") format("opentype");
-  font-style: "normal";
-  font-weight: normal; }
-
-@font-face {
-  font-family: "Majesti Banner Book Italic";
-  src: url("fonts/Majesti-Banner/Majesti-Banner-BookItalic.otf") format("opentype");
-  font-style: "italic";
-  font-weight: initial; }
-
-@font-face {
-  font-family: "Majesti Banner Heavy";
-  src: url("fonts/Majesti-Banner/Majesti-Banner-Heavy.otf") format("opentype");
-  font-style: "normal";
-  font-weight: initial; }
-
-@font-face {
-  font-family: "Majesti Banner Heavy Italic";
-  src: url("fonts/Majesti-Banner/Majesti-Banner-HeavyItalic.otf") format("opentype");
-  font-style: "italic";
-  font-weight: initial; }
-
-@font-face {
+@import url("fontface.scss");
+body {
   font-family: "Majesti Banner Light";
-  src: url("fonts/Majesti-Banner/Majesti-Banner-Light.otf") format("opentype");
-  font-style: "normal";
-  font-weight: initial; }
-
-@font-face {
-  font-family: "Majesti Banner Light Italic";
-  src: url("fonts/Majesti-Banner/Majesti-Banner-LightItalic.otf") format("opentype");
-  font-style: "italic";
-  font-weight: initial; }
-
-@font-face {
-  font-family: "Majesti Banner Medium";
-  src: url("fonts/Majesti-Banner/Majesti-Banner-Medium.otf") format("opentype");
-  font-style: "normal";
-  font-weight: initial; }
-
-@font-face {
-  font-family: "Majesti Banner Medium Italic";
-  src: url("fonts/Majesti-Banner/Majesti-Banner-MediumItalic.otf") format("opentype");
-  font-style: "italic";
-  font-weight: initial; }
-
-.body {
-  font-family: "Majesti Banner Light"; }
+  margin: 0;
+  background-color: #faebd7; }
 
 .container {
   position: relative;
@@ -76,7 +18,7 @@
 .wedding-couple-names .logo {
   width: 150px;
   height: 120px;
-  content: url(logo.jpg); }
+  content: url(../logo.png); }
 
 .wedding-couple-names .main-name {
   height: 120px;

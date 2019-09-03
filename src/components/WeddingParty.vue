@@ -49,21 +49,21 @@ export default {
     },
     initBridalParty() {
       this.party.bride.push(
-        this.partyMemberFactory('emily', 'Emily Fiumenero', 'Cousin of the bride', 2));
+        this.partyMemberFactory('emily', 'Emily Fiumenero', 'Cousin of the bride', 1));
       this.party.bride.push(
-        this.partyMemberFactory('rayley', 'Rayley Hunton', 'Childhood best friend of the bride', 2));
+        this.partyMemberFactory('rayley', 'Rayley Hunton', 'Childhood best friend of the bride', 1));
       this.party.bride.push(
-        this.partyMemberFactory('aj', 'AJ Kiser', 'Best friend of the bride since college', 2));
+        this.partyMemberFactory('aj', 'AJ Kiser', 'Best friend of the bride since college', 1));
     },
     initGroopParty() {
       this.party.groom.push(
-        this.partyMemberFactory('husani', 'Husani Hylton', 'Brother of the groom', 2));
+        this.partyMemberFactory('husani', 'Husani Hylton', 'Brother of the groom', 1));
       this.party.groom.push(
-        this.partyMemberFactory('jean', 'Jean Coo-Pay', 'Best friend of the groom since college', 2));
+        this.partyMemberFactory('jean', 'Jean Coo-Pay', 'Best friend of the groom since college', 1));
       this.party.groom.push(
-        this.partyMemberFactory('philip', 'Philip Gebret', 'Best friend of the groom since high school', 2));
+        this.partyMemberFactory('philip', 'Philipos Ghebretnsae', 'Best friend of the groom since high school', 1));
       this.party.groom.push(
-        this.partyMemberFactory('cj', 'CJ B.', 'Best friend of the groom since high school', 2));
+        this.partyMemberFactory('cj', 'Clifton Bathersfield', 'Best friend of the groom since high school', 1));
     },
   },
 };
@@ -95,6 +95,17 @@ export default {
   display: flex;
   -ms-flex-wrap: wrap; /* IE10 */
   flex-wrap: wrap;
-  padding: 0 4px;
+  padding: 0 1rem;
+  // justify-content: space-between;
+  justify-content: space-evenly;
+}
+
+.groom-party-container {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 1rem;
+  justify-content: space-evenly;
 }
 </style>

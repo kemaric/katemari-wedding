@@ -29,7 +29,7 @@
       <iframe class="wedding-proposal-video" v-bind:src='proposal.asset' width="640" height="480"></iframe>
     </div>
      <h1>    
-       <img class="cover-photo" src="static\img\engagement-footer-1.jpg" alt="Kemari and Katherine Engagement Pic">
+       <img class="cover-photo" src="static\img\KatherineKemariEngagement-71_websize.jpg" alt="Kemari and Katherine Engagement Pic">
     </h1>
   </div>
   
@@ -77,7 +77,7 @@ a {
   color: #35495E;
 }
 .cover-photo {
-  max-width: 100%; height: auto;
+  max-width: 100vw; height: auto;
 }
 .section {
 padding-top: 5rem;

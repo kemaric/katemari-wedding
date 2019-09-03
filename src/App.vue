@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div>
+    <div class="app-wrapper">
       <!-- <div class="login-head">
         <a  href="#" v-if="!activeUser" @click.prevent="login">Login</a>
         <div v-else>
@@ -9,29 +9,13 @@
       </div> -->
       <header class="app-header">
           <div class="container wedding-header">
-            <span class="left wedding-date">November 2, 2019</span>
+            <span class="left wedding-date">November 2, 2019 Annapolis, MD</span>
             <span class="right wedding-hashtag">#KATEMARIWEDDING</span>
           </div>
           <div class="couple center">
             <span class="bride-groom-name">Katherine and Kemari</span>
           </div>
-          <div id="myHeader" class="header-navigation navigation">
-                <!-- use router-link component for navigation. -->
-                <!-- specify the link by passing the `to` prop. -->
-                <!-- <router-link> will be rendered as an `<a>` tag by default -->
-              <ul>
-                <li><router-link to="/">Home</router-link></li>
-                <li><router-link to="/date">Save The Date</router-link></li>
-                <li><router-link to="/party">Wedding Party</router-link></li>
-                <li><router-link to="/photos">Photos</router-link></li>
-                <li><router-link to="/registry">Registry</router-link></li>
-                <li><router-link to="/songs">Song Requests</router-link></li>
-                <li><router-link to="/venue">Venue</router-link></li>
-                <li><router-link to="/news">Annuncements</router-link></li>
-                <li><router-link to="/faq">FAQ</router-link></li>
-                <li><router-link to="/rsvp">RSVP</router-link></li>
-              </ul>
-          </div>
+              <navigation id="myHeader"></navigation>
       </header>
       <main class="content">
         <!-- route outlet -->
@@ -63,8 +47,33 @@
 </template>
 
 <script>
+import Navigation from './components/Navigation';
+import * as tools from './helpers';
+
+export const db = tools.fbDBConnection.firestore();
+db.enablePersistence().catch((err) => {
+  if (err.code === 'failed-precondition') {
+    // Multiple tabs open, persistence can only be enabled
+    // in one tab at a a time.
+    // ...
+    console.warn('Application with multiple tabs is not supported in current browser.\n',
+      'Please close one and refresh.');
+  } else if (err.code === 'unimplemented') {
+    // The current browser does not support all of the
+    // features required to enable persistence
+    // ...
+    console.warn('The current browser doesn\'t support multiple tabs.');
+  }
+});
+// eslint-disable-next-line no-console
+console.debug('Firebase initialized', db);
+
+
 export default {
   name: 'app',
+  components: {
+    navigation: Navigation,
+  },
   mounted() {
     function initNav() {
       const header = document.getElementById('myHeader');
@@ -111,7 +120,7 @@ export default {
   },
 };
 </script>
-<style scroped lang="scss">
+<style lang="scss">
   @import url('./assets/css/styles.scss');
 /* TODO: Move this to a Sass file */
 body {
@@ -120,12 +129,18 @@ body {
 }
 
 #app {
-  font-family: "Majesti Banner Bold" "Avenir", Helvetica, Arial, sans-serif;
+  font-family: "Majesti Banner Bold", "Dancing Script", "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* color: #2c3e50; */
   font-weight:normal;
 font-style:normal;
+
+  .app-wrapper {
+     min-height: 100vh;
+    position: relative;
+    padding-bottom: 30px;
+  }
 }
 
 main {
@@ -181,51 +196,6 @@ header span {
   font-size: .7rem;
 }
 
-.header-navigation ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  margin: auto;
-  font-size: 12px;
-  text-align: center;
-  padding-top: 2rem;
-}
-.navigation li {
-  display: inline-block;
-  width: fit-content;
-}
-.header-navigation li a {
-  display: block;
-  color: gray;
-  text-align: center;
-  text-decoration: none;
-  
-  &:hover {
-    color:red
-  }
-
-  &.is-active {
-    text-decoration: underline;
-  }
-}
-
-.header-navigation li a:hover {
-  /* background-color: #111111; */
-  color:red
-}
-.header-navigation li a:active {
-  /* color: blue; */
-  text-decoration: underline;
-
-}
-/**
-* Stickey Header styles
-**/
-/* Style the header */
-.header-navigation {
-  color: #f1f1f1;
-}
 
 /* Page content */
 .content {
@@ -258,6 +228,7 @@ header span {
 }
 
 .footer {
-    margin: 0 1rem 1rem 1rem;
+   position: absolute;
+   bottom: 0;
 }
 </style>

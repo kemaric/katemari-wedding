@@ -2,50 +2,76 @@
   <div class="view-header hello">
     <h1 class="component-head">{{ msg }}</h1>
     <!-- <h2>Latest announcements</h2> -->
-    <ul class="announcement-list">
+    <template>
+      <VueFaqAccordion 
+        :items="faqs"
+        :questionProperty="props.questionProperty.default"
+        :answerProperty="props.answerProperty.default"
+      />
+    </template>
+    <!-- <ul class="announcement-list">
       <li class="announcement" v-for="announcement in announcements" v-bind:key="announcement.id">
-        <span>{{ getDate(announcement) | formatDate }} : {{ announcement.text }}</span>
+        <span>{{ announcement.text }}</span>
       </li>
       <li v-if="announcements.length === 0">
         <span>{{ noAnnouncement }}</span>
       </li>
-    </ul>
+    </ul> -->
   </div>
 </template>
 
 <script>
+import VueFaqAccordion from 'vue-faq-accordion';
 import { db } from '../App';
 
 export default {
-  name: 'announcements',
+  name: 'faq',
+  components: {
+    VueFaqAccordion,
+  },
   mounted() {
   },
   data() {
     return {
-      msg: 'Latest announcements',
-      noAnnouncement:
-        'Stay tuned for upcoming #KatemariWedding Announcements...',
-      announcements: [],
+      msg: 'Feaquently Asked Questions ',
+      noFaq:
+        'Stay tuned for #KatemariWedding FAQ...',
+      faqs: [],
+      props: {
+        activeColor: {
+          type: String,
+          default: 'purple',
+        },
+        /**
+         * Key name of object in items array for specifying title of question
+         */
+        questionProperty: {
+          type: String,
+          default: 'question',
+        },
+        /**
+        * Key name of object in items array for specifying content text of open question
+        */
+        answerProperty: {
+          type: String,
+          default: 'answer',
+        },
+      },
     };
   },
   firestore() {
     return {
-      announcements: db
-        .collection('announcements')
-        .orderBy('date_made', 'desc'),
+      faqs: db
+        .collection('faqs'),
     };
   },
   methods: {
     loadNews() {
       if (!db) {
-        return { announcements: [] };
+        return { faqs: [] };
       }
       // Create the query to load the last 12 messages and listen for new ones.
-      const query = db
-        .collection('announcements')
-        .orderBy('date_made', 'desc')
-        .limit(12);
-
+      const query = db.collection('announcements');
       return query.onSnapshot((snapshot) => {
         snapshot.docChanges().forEach((change) => {
           if (change.type === 'removed') {
@@ -86,12 +112,6 @@ export default {
       }
       return -1;
     },
-    getDate(announcementDate) {
-      if (announcementDate.date_made && announcementDate.date_made.seconds) {
-        return new Date(announcementDate.date_made.seconds * 1000).toISOString();
-      }
-      return announcementDate.date_made.seconds;
-    },
   },
 };
 </script>
@@ -105,7 +125,6 @@ export default {
 .announcement-list {
   list-style-type: none;
   padding: 0;
-  text-align: center;
 }
 
 /* li {
@@ -119,7 +138,6 @@ export default {
 
 .announcement {
   display: block;
-  text-align: left;
   padding: 1rem;
 }
 </style>
