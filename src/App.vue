@@ -148,6 +148,7 @@ main {
   margin-top: 40px;
   .view-header {
     text-align: center;
+    font-family: "Dancing Script"
   } 
 }
  

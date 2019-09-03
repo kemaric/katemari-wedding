@@ -4,6 +4,7 @@
     <!-- <h2>Latest announcements</h2> -->
     <template>
       <VueFaqAccordion 
+      class="container-text-font"
         :items="faqs"
         :questionProperty="props.questionProperty.default"
         :answerProperty="props.answerProperty.default"

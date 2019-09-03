@@ -45,6 +45,7 @@ const routes = [
   { path: '/songs', component: SongRequest },
   { path: '/registry', component: Registry, meta: { requiresAuth: false } },
   { path: '/venue', component: Construction },
+  { path: '/travel', component: Construction },
   { path: '/faq', component: Faq },
   { path: '/rsvp', component: Construction, meta: { requiresAuth: false } },
   { path: '/404', component: NotFound },

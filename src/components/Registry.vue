@@ -1,13 +1,13 @@
 <template>
   <div class="view-header hello">
-    <h2 class="component-head">{{ msg }}</h2>
+    <h2 class="component-head  container-text-font">{{ msg }}</h2>
         <div class='view-header registry-container'>
           <div class='registry' v-for='registry in registries' v-bind:key='registry.name'>
             <a v-bind:href='registry.uri'>
               <div class="inline">
                 <img class="registry-pic" v-bind:src='registry.pic' v-bind:alt='registry.name'>
               </div>
-              <div class='registry-name'> {{ registry.name }} </div>
+              <div class='registry-name  container-text-font'> {{ registry.name }} </div>
               <!-- <div  class='registry-details'> {{ registry.uri }} </div> -->
             </a>
           </div>

@@ -34,3 +34,9 @@ body {
 .responsive {
   max-width: 100%;
   height: auto; }
+
+.container-text-font {
+  font-family: "Avenir"; }
+
+.container-header-font {
+  font-family: "Dancing Script"; }

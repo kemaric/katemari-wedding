@@ -18,14 +18,14 @@
     <div class="section wedding-meet">
       <h2>How We Met</h2>
       <h3> {{ meeting.date }} </h3>
-      <p>
+      <p class="container-text-font">
         {{ meeting.summary }}
       </p>
     </div>
     <div class="section wedding-proposal">
       <h2>The Proposal</h2>
       <h3>{{ proposal.date }}</h3>
-      <p>{{ proposal.summary }}</p>
+      <p class="container-text-font">{{ proposal.summary }}</p>
       <iframe class="wedding-proposal-video" v-bind:src='proposal.asset' width="640" height="480"></iframe>
     </div>
      <h1>    

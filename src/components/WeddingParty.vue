@@ -82,10 +82,14 @@ export default {
 
     .party-member-name {
       font-weight: bold;
+      font-family: "Avenir";
     }
     .party-member-pic {
       max-width: 20rem;
       height: auto;  width: 100%;
+    }
+    .party-member-details {
+      font-family: "Avenir";
     }
   }
   

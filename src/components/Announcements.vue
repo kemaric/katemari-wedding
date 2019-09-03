@@ -2,7 +2,7 @@
   <div class="view-header hello">
     <h1 class="component-head">{{ msg }}</h1>
     <!-- <h2>Latest announcements</h2> -->
-    <ul class="announcement-list">
+    <ul class="announcement-list container-text-font">
       <li class="announcement" v-for="announcement in announcements" v-bind:key="announcement.id">
         <span>{{ getDate(announcement) | formatDate }} : {{ announcement.text }}</span>
       </li>
