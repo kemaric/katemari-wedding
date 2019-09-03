@@ -1,6 +1,15 @@
 <template>
   <div class="view-header hello">
     <h1 class="component-head">{{ msg }}</h1>
+    <div class="venue-info">
+      <img src='https://www.aacounty.org/sebin/z/t/blue-heron-center-2.jpg'>
+      <h2> About the Venue </h2>
+      <p class="container-text-font">
+        The Blue Heron Center At. Quiet Waters Park. 600 Quiet Waters Park Road. Annapolis, Maryland 21403
+      </p>
+    </div>
+    <div class="venue-seating">
+    </div>
   </div>
 </template>
 
@@ -9,7 +18,7 @@ export default {
   name: 'venue',
   data() {
     return {
-      msg: 'Coming Soon!',
+      msg: 'Quiet Waters Park: Blue Heron Center',
     };
   },
 };
