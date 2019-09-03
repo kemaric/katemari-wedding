@@ -11,6 +11,7 @@ import Auth from '@okta/okta-vue';
 import SaveDate from '@/components/SaveDate';
 import Faq from '@/components/Faq';
 import Registry from '@/components/Registry';
+// import Navigation from '@/components/Navigation';
 
 Vue.use(Auth, {
   issuer: 'https://dev-696620.okta.com/oauth2/default',
@@ -57,6 +58,7 @@ const router = new VueRouter({
   mode: 'history',
   linkExactActiveClass: 'is-active',
   routes,
+  // component: Navigation,
 });
 
 router.beforeEach(Vue.prototype.$auth.authRedirectGuard());

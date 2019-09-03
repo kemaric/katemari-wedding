@@ -129,7 +129,7 @@ body {
 }
 
 #app {
-  font-family: "Majesti Banner Bold" "Avenir", Helvetica, Arial, sans-serif;
+  font-family: "Majesti Banner Bold", "Dancing Script", "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* color: #2c3e50; */

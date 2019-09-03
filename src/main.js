@@ -14,5 +14,5 @@ new Vue({
   components: { App },
   render: h => h(App),
   // eslint-disable-next-line no-undef
-  vuetify: new Vuetify(),
+  // vuetify: new Vuetify(),
 });
