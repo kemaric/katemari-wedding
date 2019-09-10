@@ -209,10 +209,13 @@ header span {
   top: 0;
   width: 100%;
   z-index: 3;
-  opacity: 0.6;
+  opacity: 0.8;
   background: #000;
-      padding-bottom: 1rem;
+  padding-bottom: 1rem;
 
+  .dropdown-content{
+      background: #000 !important;
+  }
 }
 
 /* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */

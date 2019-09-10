@@ -22,7 +22,7 @@
         </a>
       </div>
     </div>
-    <div id="toc_container container-text-font">
+    <!-- <div id="toc_container container-text-font">
       <p class="toc_title container-text-font">Directions</p>
       <ul class="toc_list container-text-font">
         <li>
@@ -54,7 +54,7 @@
           </ul>
         </li>
       </ul>
-    </div>
+    </div> -->
 
     <div class="container-text-font">
           <h2 id="Directions_To_Hotel"></h2>
