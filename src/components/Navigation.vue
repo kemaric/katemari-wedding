@@ -78,6 +78,10 @@ export default {
       font-size: 1.25rem;
       text-align: center;
       padding-top: 2rem;
+
+      .dropdown-content{
+        padding-top: .5rem;
+      }
     }
     .navigation li {
       display: inline-block;
