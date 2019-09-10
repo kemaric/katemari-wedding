@@ -22,9 +22,9 @@
         </a>
       </div>
     </div>
-    <div id="toc_container">
+    <div id="toc_container container-text-font">
       <p class="toc_title container-text-font">Directions</p>
-      <ul class="toc_list">
+      <ul class="toc_list container-text-font">
         <li>
           <a href="#Directions_To_Hotel">Directions to DoubleTree</a>
           <ul>
@@ -58,9 +58,9 @@
 
     <div class="container-text-font">
           <h2 id="Directions_To_Hotel"></h2>
-          <h1 id="Directions_To_Hotel_De">Directions from Deleware to Double Tree Hotel:</h1>
+          <h2 id="Directions_To_Hotel_De">Directions from Deleware to Double Tree Hotel:</h2>
            <p>
-             From 95: <br>
+             Via 95: <br>
               Get on I-95 S from N King St and M.L.K. Jr. Blvd
               6 min (1.5 mi)<br>
               
@@ -71,7 +71,7 @@
               3 min (0.8 mi)<br>
           </p>
           <p>
-            By 301:<br>
+            Via 301:<br>
             Get on I-95 S from N King St and M.L.K. Jr. Blvd
             6 min (1.5 mi) <br>
             
@@ -85,7 +85,7 @@
           <iframe src="https://www.google.com/maps/embed?pb=!1m24!1m8!1m3!1d789809.6103148216!2d-76.6571875!3d39.3518479!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x89c70f185c46af6f%3A0x8516da5077308c00!2sWilmington%2C%20DE!3m2!1d39.744655!2d-75.5483909!4m5!1s0x89b7f6cd41e159d3%3A0x5b33629a78e5a7d5!2s210%20Holiday%20Ct%2C%20Annapolis%2C%20MD%2021401!3m2!1d38.982556699999996!2d-76.5473353!5e0!3m2!1sen!2sus!4v1568076490819!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
     </div>
     <div class="container-text-font">
-          <h1 id="Directions_To_Hotel_BWI">Directions from BWI to Double Tree Hotel:</h1>
+          <h2 id="Directions_To_Hotel_BWI">Directions from BWI to Double Tree Hotel:</h2>
           <p>
             By I-97:
             Get on I-97 S in Ferndale from Service Rd Lower Level, MD-170 N and MD-162 E/Aviation Blvd
@@ -100,7 +100,7 @@
           <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d198186.61804083618!2d-76.80266961730038!3d39.09130708690323!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x89b7e2fcbbc2e00b%3A0x150cfa971740!2sBaltimore%2FWashington%20International%20Thurgood%20Marshall%20Airport%2C%20Baltimore%2C%20MD%2021240!3m2!1d39.1774042!2d-76.6683922!4m5!1s0x89b7f6cd41e159d3%3A0x5b33629a78e5a7d5!2s210%20Holiday%20Ct%2C%20Annapolis%2C%20MD%2021401!3m2!1d38.982556699999996!2d-76.5473353!5e0!3m2!1sen!2sus!4v1568076997018!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
     </div>
     <div class="container-text-font">
-          <h1 id="Directions_To_Hotel_Dullas">Directions from Dulles to Double Tree Hotel:</h1>
+          <h2 id="Directions_To_Hotel_Dullas">Directions from Dulles to Double Tree Hotel:</h2>
           <p> 
             Via I-495 N and US-50 E <br>
             Get on VA-267 E in Hunter Mill from Aviation Dr
@@ -116,7 +116,7 @@
     </div>
     <div class="container-text-font">
           <h2 id="Directions_To_Park"></h2>
-          <h1 id="Directions_To_Park_Hotel">Directions from Double Tree Hotel to Quiet Water Park:</h1>
+          <h2 id="Directions_To_Park_Hotel">Directions from Double Tree Hotel to Quiet Water Park:</h2>
           <p>
             Follow Holiday Ct to Riva Rd
               2 min (0.1 mi)<br>
@@ -130,7 +130,7 @@
           <iframe src="https://www.google.com/maps/embed?pb=!1m24!1m8!1m3!1d24819.141362404058!2d-76.5383225!3d38.9607009!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x89b7f6cd4124fbd9%3A0x3eb5473804687f66!2sDoubleTree%20by%20Hilton%20Hotel%20Annapolis%2C%20Holiday%20Court%2C%20Annapolis%2C%20MD!3m2!1d38.982391799999995!2d-76.5474097!4m5!1s0x89b7f5d2a8006901%3A0x7a494eca962c6e96!2sQuiet%20Waters%20Park%2C%20600%20Quiet%20Waters%20Park%20Rd%2C%20Annapolis%2C%20MD%2021403!3m2!1d38.937669799999995!2d-76.5008994!5e0!3m2!1sen!2sus!4v1568075687298!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
     </div>
     <div class="container-text-font">
-          <h1  id="Directions_To_Park_BWI">Directions from BWI to Quiet Water Park:</h1>
+          <h2 id="Directions_To_Park_BWI">Directions from BWI to Quiet Water Park:</h2>
           <p>
             Get on I-97 S in Ferndale from MD-170 N and MD-162 E/Aviation Blvd
             7 min (3.7 mi)<br>
@@ -144,7 +144,7 @@
           <iframe src="https://www.google.com/maps/embed?pb=!1m24!1m8!1m3!1d198244.97120369005!2d-76.7764958!3d39.0705376!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x89b7e2e6233a86c9%3A0x450cced8491184a8!2sBWI%20Airport%2C%20Baltimore%2C%20MD!3m2!1d39.1828527!2d-76.6698617!4m5!1s0x89b7f5d2a8006901%3A0x7a494eca962c6e96!2sQuiet%20Waters%20Park%2C%20600%20Quiet%20Waters%20Park%20Rd%2C%20Annapolis%2C%20MD%2021403!3m2!1d38.937669799999995!2d-76.5008994!5e0!3m2!1sen!2sus!4v1568077429762!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
     </div>
     <div class="container-text-font">
-          <h1 id="Directions_To_Park_Dulles">Directions from Dulles to Quiet Water Park:</h1>
+          <h2 id="Directions_To_Park_Dulles">Directions from Dulles to Quiet Water Park:</h2>
           <p>
             Get on VA-267 E in Hunter Mill from Aviation Dr
             5 min (2.5 mi)<br>
@@ -157,6 +157,7 @@
           </p>
           <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d794843.005221367!2d-77.53497155417062!3d38.90441984712258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x89b64740174eb057%3A0x8e01cb201080601d!2sDulles%20International%20Airport%20(IAD)%2C%201%20Saarinen%20Cir%2C%20Dulles%2C%20VA%2020166!3m2!1d38.9531162!2d-77.45653879999999!4m5!1s0x89b7f5d2a8006901%3A0x7a494eca962c6e96!2sQuiet%20Waters%20Park%2C%20600%20Quiet%20Waters%20Park%20Rd%2C%20Annapolis%2C%20MD%2021403!3m2!1d38.937669799999995!2d-76.5008994!5e0!3m2!1sen!2sus!4v1568077517339!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
     </div>
+
   </div>
 </template>
 
