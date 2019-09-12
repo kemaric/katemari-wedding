@@ -17,7 +17,7 @@
           </div>
               <navigation id="myHeader"></navigation>
       </header>
-      <main class="content">
+      <main class="main-body content">
         <!-- route outlet -->
         <!-- component matched by the route will render here -->
         <router-view></router-view>
@@ -145,7 +145,10 @@ font-style:normal;
 
 main {
   /* text-align: center; */
-  margin-top: 40px;
+  .main-body {
+    // margin-top: 40px;
+
+  }
   .view-header {
     text-align: center;
     font-family: "Dancing Script"

@@ -134,6 +134,7 @@ export default {
         cursor:auto;
         // background-color:#fff;
         display:none;
+        padding: .5rem;
         position: fixed;
         // min-width:160px;
         // margin:0;
@@ -149,6 +150,7 @@ export default {
       &:hover {
         .dropdown-content {
           display:block;
+          padding: .5rem;
           li {
               display: block;
           }
