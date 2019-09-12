@@ -3,7 +3,7 @@ import VueRouter from 'vue-router';
 import Hello from '@/components/Hello';
 import WeddingParty from '@/components/WeddingParty';
 import Announcements from '@/components/Announcements';
-import Construction from '@/components/Construction';
+import RSVP from '@/components/RSVP';
 import Photos from '@/components/Photos';
 import NotFound from '@/components/NotFound';
 import Secure from '@/components/Secure';
@@ -49,7 +49,7 @@ const routes = [
   { path: '/venue', component: Venue },
   { path: '/travel', component: Travel },
   { path: '/faq', component: Faq },
-  { path: '/rsvp', component: Construction, meta: { requiresAuth: false } },
+  { path: '/rsvp', component: RSVP, meta: { requiresAuth: false } },
   { path: '/404', component: NotFound },
   { path: '*', component: NotFound, redirect: '/404' },
 

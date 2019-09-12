@@ -1,12 +1,12 @@
 <template>
   <div class="view-header hello">
-    <img src="/static/img/Katherine-and-Kemari-Save-the-Date.jpg" class="responsive">
+    <img src="/static/img/Katherine-and-Kemari-Save-the-Date.jpg" class="responsive-alt">
   </div>
 </template>
 
 <script>
 export default {
-  name: 'construction',
+  name: 'saveDate',
   data() {
     return {
       msg: 'Coming Soon!',
