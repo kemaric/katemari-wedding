@@ -1,9 +1,9 @@
 <template>
   <div class="view-header hello">
     <h1 class="component-head container-text-font">{{ msg }}</h1>
-    <p>Please complete your RSVP(s) <a target="blank" href="https://www.zola.com/wedding/katemariwedding/rsvp">HERE</a></p>
+    <p>Please complete your RSVP(s) <a target="blank" href="https://www.zola.com/wedding/katemariwedding/rsvp">HERE. </a></p>
     <a target="blank" href="https://www.zola.com/wedding/katemariwedding/rsvp">
-      <img src="/static/img/Wedding-Invitation-K+K.png" class="responsive-alt">
+      <img src="/static/img/Wedding-Invitation-K-K.png" class="responsive-alt">
     </a>
   </div>
 </template>
