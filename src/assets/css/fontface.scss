@@ -13,7 +13,6 @@ $font-dir: "./fonts/majesti-banner";
   }
 }
 
-@import url(http://fonts.googleapis.com/css?family=Roboto+Slab|Open+Sans:400italic,700italic,400,700);
 
 @include font-face("Majesti Banner Bold", majesti-banner-bold, $font-dir, "normal", initial);
 @include font-face("Majesti Banner Bold Italic", majesti-banner-boldItalic, $font-dir, "italic", initial);
@@ -26,3 +25,4 @@ $font-dir: "./fonts/majesti-banner";
 @include font-face("Majesti Banner Medium", majesti-banner-medium, $font-dir, "normal", initial);
 @include font-face("Majesti Banner Medium Italic", majesti-banner-mediumItalic, $font-dir, "italic", initial);
 @import url('https://fonts.googleapis.com/css?family=Dancing+Script:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab|Open+Sans:400italic,700italic,400,700');
