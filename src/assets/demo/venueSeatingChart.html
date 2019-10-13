@@ -83,15 +83,15 @@
                         });
 
                  // the background image, a floor plan
-                myDiagram.add(
-                    $(go.Part,  // this Part is not bound to any model data
-                    {
-                        layerName: "Background", position: new go.Point(0, 0),
-                        selectable: false, pickable: false
-                    },
-                    $(go.Picture, {source:"https://www.aacounty.org/departments/recreation-parks/parks/quiet-waters/blue-heron-center/images/blue-heron-center-diagram.jpg",
-                    width: 1500, height:500})
-                    ));
+                // myDiagram.add(
+                //     $(go.Part,  // this Part is not bound to any model data
+                //     {
+                //         layerName: "Background", position: new go.Point(0, 0),
+                //         selectable: false, pickable: false
+                //     },
+                //     $(go.Picture, {source:"https://www.aacounty.org/departments/recreation-parks/parks/quiet-waters/blue-heron-center/images/blue-heron-center-diagram.jpg",
+                //     width: 1500, height:500})
+                //     ));
 
 
                 myDiagram.nodeTemplateMap.add("",  // default template, for people
@@ -530,19 +530,120 @@
         start = () => {
             build();
             const tables = 10;
+            /*
+            Katherine, if you want to save the work you did, just put the contents of
+            the printed out Node Data Array here.
+            */
+            const savedSeats =  [ 
+{"key":0, "category":"TableR8", "name":"Wedding \nParty", "guests":{"3":"Mr. Jean-Gerard Coupet", "4":"Mr. Philipos Ghebretnsae", "5":" Clifton Bathersfield"}, "loc":"52.772974220848084 134.88764405307776", "angle":270},
+{"key":1, "category":"TableR8", "name":"Wedding \nParty", "guests":{"6":"Ms. AJ Kiser", "7":"Ms. Rayley Hunton", "8":" Emily Fiumenero"}, "loc":"52.772974220848084 134.88764405307776", "angle":270},
+{"key":2, "category":"TableC8", "name":"Bride \nFamily", "guests":{"1":" Mary Poirier", "2":" John Campanile", "3":" Beth Kameras", "4":" David Kameras", "6":"Ms. Jane Poirier", "7":"Mrs. Laura Poirier", "8":"Mr. Michael Poirier"}, "loc":"239.51005554199222 316.00997161865234"},
+{"key":3, "category":"TableC8", "name":"Groom \nFamily", "guests":{"1":"Ms. Kristina Robb", "2":" Hope Hylton", "5":" Earl Nedrick", "6":" Daisy Nedrick", "7":"Mr. Francis Robb", "8":"Mrs. Hermine Robb"}, "loc":"242.20971473674768 35.46155376458168", "angle":220.49366752436583},
+{"key":4, "category":"TableC8", "name":"Family", "guests":{"1":" Elizabeth Prugh", "2":" Gary Prugh", "3":" Patricia Poirier", "4":" Philip Miller", "5":"Mr. Noah Friedkin", "6":"Mr. William Campfield", "7":" Raymond Hunton", "8":" Beverly Hunton"}, "loc":"448.31506616210936 323.62453280239106"},
+{"key":5, "category":"TableC8", "name":"Family", "guests":{"1":" Husani Hylton", "2":" Havieanna Hylton", "3":" Gheliya Nedrick", "5":"Ms. Khaleed Plusone", "6":"Mr. Khaleed Nedrick", "7":" Shomari Nedrick", "8":" Rashida Nedrick"}, "loc":"457.6471900943757 27.92953223981859", "angle":200.11036961645368},
+{"key":6, "category":"TableC8", "name":"Family", "guests":{"2":" Alex Prugh", "3":"Mr. David Farrell", "4":"Mrs. Adrienne Farrell", "6":"Mr. Cameron Cook", "7":"Mrs. Allison Cook", "8":" Christopher Prugh"}, "loc":"642.1599884033203 313.6699676513672"},
+{"key":7, "category":"TableC8", "name":"Friends", "guests":{"1":"Miss Jade Johnson", "2":"Mr. Alexander Russo", "3":"Miss Kassie Schaare", "4":"Ms. Simone Alexis Risdon", "5":" Aprill Hogue", "6":" Kiana White", "7":"Ms. Reanna Rogers", "8":"Ms. Mercy Eke"}, "loc":"859.644991699219 323.30437514858243"},
+{"key":8, "category":"TableC8", "name":"Friends", "guests":{"1":"Ms. Sarah Infante", "2":"Mr. Matt Briggs", "3":"Ms. Alexa Bleach", "4":"Mr. Andrew Chiang-Smith", "5":"Mr. Cameron Ghafoor", "6":" Michael Cameras", "7":"Mr. Adam Campanile", "8":" Courtney Davis"}, "loc":"669.640270318985 28.26455894565578"},
+{"key":9, "category":"TableC8", "name":"Friends", "guests":{"1":" Mallory Oludemi", "2":" Bori Oludemi", "3":" Jose Lira", "4":" Melanie Lemons", "5":"Ms. Olivia Outlaw", "6":"Mr. Edgar Morales", "7":"Ms. Cambly Morales", "8":"Mr. Damani Nickens"}, "loc":"870.6985201293944 39.87190732421877", "angle":334.2242444095701},
+{"key":10, "category":"TableC8", "name":"Vendor", "guests":{"1":" Brittany Dunbar", "6":" Diana McFadden", "7":" Will Stylez", "8":" Brandi Maloney"}, "loc":"1009.8186728645323 195.5816438964843", "angle":348.54328609794856},
+{"key":" Clifton Bathersfield", "plus":0, "loc":"109.27297422084808 86.58764405307775", "table":1, "seat":5},
+{"key":" Emily Fiumenero", "plus":0, "loc":"52.772974220848084 231.38764405307776", "table":1, "seat":8},
+{"key":"Mr. Philipos Ghebretnsae", "plus":0, "loc":"52.772974220848084 38.387644053077764", "table":1, "seat":4},
+{"key":"Ms. AJ Kiser", "plus":0, "loc":"109.27297422084808 134.88764405307776", "table":1, "seat":6},
+{"key":"Ms. Rayley Hunton", "plus":0, "loc":"109.27297422084808 183.18764405307775", "table":1, "seat":7},
+{"key":"Mr. Jean-Gerard Coupet", "plus":0, "loc":"-3.7270257791519157 86.58764405307775", "table":1, "seat":3},
+{"key":" Beth Kameras", "plus":0, "loc":"316.0100555419922 316.00997161865234", "table":2, "seat":3},
+{"key":" Bori Oludemi", "plus":0, "loc":"895.6342254981614 -31.636243244524436", "table":9, "seat":2},
+{"key":" Christopher Prugh", "plus":0, "loc":"588.6099884033204 260.1199676513672", "table":6, "seat":8},
+{"key":" David Kameras", "plus":0, "loc":"293.0600555419922 369.55997161865235", "table":2, "seat":4},
+{"key":" Hope Hylton", "plus":0, "loc":"166.71268945438945 41.411694394429006", "table":3, "seat":2},
+{"key":" John Campanile", "plus":0, "loc":"293.0600555419922 262.45997161865233", "table":2, "seat":2},
+{"key":" Husani Hylton", "plus":0, "loc":"431.34422187374645 99.76548328652343", "table":5, "seat":1},
+{"key":" Havieanna Hylton", "plus":0, "loc":"388.9499466072418 59.80262021807158", "table":5, "seat":2},
+{"key":" Mallory Oludemi", "plus":0, "loc":"837.4324878436971 -29.016561202574166", "table":9, "seat":1},
+{"key":" Mary Poirier", "plus":0, "loc":"239.5100555419922 239.50997161865234", "table":2, "seat":1},
+{"key":" Rashida Nedrick", "plus":0, "loc":"489.5202780726287 96.62677572695237", "table":5, "seat":8},
+{"key":" Shomari Nedrick", "plus":0, "loc":"529.4831411410805 54.23250046044774", "table":5, "seat":7},
+{"key":"Mr. Adam Campanile", "plus":0, "loc":"593.140270318985 28.26455894565578", "table":8, "seat":7},
+{"key":"Mr. Cameron Cook", "plus":0, "loc":"588.6099884033204 367.2199676513672", "table":6, "seat":6},
+{"key":"Mr. David Farrell", "plus":0, "loc":"718.6599884033203 313.6699676513672", "table":6, "seat":3},
+{"key":"Mr. Francis Robb", "plus":0, "loc":"300.38626181689454 85.1378999449466", "table":3, "seat":7},
+{"key":"Mr. Khaleed Nedrick", "plus":0, "loc":"526.3444335815094 -3.943555738434398", "table":5, "seat":6},
+{"key":"Mr. Michael Poirier", "plus":0, "loc":"185.96005554199218 262.45997161865233", "table":2, "seat":8},
+{"key":"Mrs. Adrienne Farrell", "plus":0, "loc":"695.7099884033203 367.2199676513672", "table":6, "seat":4},
+{"key":"Mrs. Allison Cook", "plus":0, "loc":"565.6599884033203 313.6699676513672", "table":6, "seat":7},
+{"key":"Mrs. Hermine Robb", "plus":0, "loc":"248.15985536659502 110.95857904693992", "table":3, "seat":8},
+{"key":"Ms. Jane Poirier", "plus":0, "loc":"185.96005554199218 369.55997161865235", "table":2, "seat":6},
+{"key":"Mrs. Laura Poirier", "plus":0, "loc":"163.0100555419922 316.00997161865234", "table":2, "seat":7},
+{"key":" Alex Prugh", "plus":0, "loc":"695.7099884033203 260.1199676513672", "table":6, "seat":2},
+{"key":" Daisy Nedrick", "plus":0, "loc":"317.70674001910595 29.511413134734312", "table":3, "seat":6},
+{"key":" Earl Nedrick", "plus":0, "loc":"291.8860609171126 -22.71499331556518", "table":3, "seat":5},
+{"key":" Elizabeth Prugh", "plus":0, "loc":"448.3150661621093 247.12453280239106", "table":4, "seat":1},
+{"key":" Gary Prugh", "plus":0, "loc":"501.8650661621093 270.07453280239104", "table":4, "seat":2},
+{"key":" Gheliya Nedrick", "plus":0, "loc":"385.81123904767076 1.626564019189459", "table":5, "seat":3},
+{"key":" Patricia Poirier", "plus":0, "loc":"524.8150661621094 323.62453280239106", "table":4, "seat":3},
+{"key":" Philip Miller", "plus":0, "loc":"501.8650661621093 377.17453280239107", "table":4, "seat":4},
+{"key":" Raymond Hunton", "plus":0, "loc":"371.8150661621093 323.62453280239106", "table":4, "seat":7},
+{"key":" Beverly Hunton", "plus":0, "loc":"394.7650661621093 270.07453280239104", "table":4, "seat":8},
+{"key":"Mr. William Campfield", "plus":0, "loc":"394.7650661621093 377.17453280239107", "table":4, "seat":6},
+{"key":"Mr. Noah Friedkin", "plus":0, "loc":"448.3150661621093 400.12453280239106", "table":4, "seat":5},
+{"key":"Mr. Alexander Russo", "plus":0, "loc":"913.1949916992189 269.7543751485824", "table":7, "seat":2},
+{"key":"Miss Kassie Schaare", "plus":0, "loc":"936.144991699219 323.30437514858243", "table":7, "seat":3},
+{"key":" Aprill Hogue", "plus":0, "loc":"859.644991699219 399.80437514858243", "table":7, "seat":5},
+{"key":" Kiana White", "plus":0, "loc":"806.094991699219 376.85437514858245", "table":7, "seat":6},
+{"key":" Michael Cameras", "plus":0, "loc":"616.0902703189851 81.81455894565579", "table":8, "seat":6},
+{"key":"Ms. Simone Alexis Risdon", "plus":0, "loc":"913.1949916992189 376.85437514858245", "table":7, "seat":4},
+{"key":"Mr. Damani Nickens", "plus":0, "loc":"799.1903695606512 14.936201955451867", "table":9, "seat":8},
+{"key":"Mr. Edgar Morales", "plus":0, "loc":"845.7628147606275 111.380057892962", "table":9, "seat":6},
+{"key":"Ms. Cambly Morales", "plus":0, "loc":"801.8100516026016 73.13793960991611", "table":9, "seat":7},
+{"key":"Ms. Kristina Robb", "plus":0, "loc":"192.53336855638275 93.63810084472851", "table":3, "seat":1},
+{"key":"Ms. Sarah Infante", "plus":0, "loc":"669.640270318985 -48.23544105434422", "table":8, "seat":1},
+{"key":"Mr. Matt Briggs", "plus":0, "loc":"723.190270318985 -25.285441054344222", "table":8, "seat":2},
+{"key":"Ms. Alexa Bleach", "plus":0, "loc":"746.140270318985 28.26455894565578", "table":8, "seat":3},
+{"key":"Mr. Andrew Chiang-Smith", "plus":0, "loc":"723.190270318985 81.81455894565579", "table":8, "seat":4},
+{"key":"Ms. Reanna Rogers", "plus":0, "loc":"783.144991699219 323.30437514858243", "table":7, "seat":7},
+{"key":"Ms. Mercy Eke", "plus":0, "loc":"806.094991699219 269.7543751485824", "table":7, "seat":8},
+{"key":"Miss Jade Johnson", "plus":0, "loc":"859.644991699219 246.80437514858244", "table":7, "seat":1},
+{"key":"Ms. Olivia Outlaw", "plus":0, "loc":"903.9645524150918 108.76037585101171", "table":9, "seat":5},
+{"key":" Melanie Lemons", "plus":0, "loc":"942.2066706981377 64.80761269298568", "table":9, "seat":4},
+{"key":" Courtney Davis", "plus":0, "loc":"616.0902703189851 -25.285441054344222", "table":8, "seat":8},
+{"key":"Mr. Cameron Ghafoor", "plus":0, "loc":"669.640270318985 104.76455894565578", "table":8, "seat":5},
+{"key":" Jose Lira", "plus":0, "loc":"939.5869886561874 6.605875038521415", "table":9, "seat":3},
+{"key":" Brandi Maloney", "plus":0, "loc":"946.6991484378674 153.73513106504714", "table":10, "seat":8},
+{"key":" Diana McFadden", "plus":0, "loc":"967.9721600330953 258.7011683231494", "table":10, "seat":6},
+{"key":" Will Stylez", "plus":0, "loc":"934.842931965888 210.77665217878996", "table":10, "seat":7},
+{"key":" Brittany Dunbar", "plus":0, "loc":"994.6236645822267 120.60590299783989", "table":10, "seat":1}
+ ];
+            const defaultTables = [
+            {"key":1, "category":"TableC8", "name":"Table 1", "guests":{}, "loc":"118.83000183105471 131.34000396728516"},
+{"key":2, "category":"TableC8", "name":"Table 2", "guests":{}, "loc":"245.5000152587891 297.3399887084961"},
+{"key":3, "category":"TableC8", "name":"Table 3", "guests":{}, "loc":"307.49998474121093 73.33000183105469"},
+{"key":4, "category":"TableC8", "name":"Table 4", "guests":{}, "loc":"434.8299865722656 310.67000579833984"},
+{"key":5, "category":"TableC8", "name":"Table 5", "guests":{}, "loc":"508.16998291015625 56.66999816894531"},
+{"key":6, "category":"TableC8", "name":"Table 6", "guests":{}, "loc":"644.8399810791016 307.33998107910156"},
+{"key":7, "category":"TableC8", "name":"Table 7", "guests":{}, "loc":"694.1599731445312 63.329994201660156"},
+{"key":8, "category":"TableC8", "name":"Table 8", "guests":{}, "loc":"852.1700134277344 295.9999694824219"},
+{"key":9, "category":"TableC8", "name":"Table 9", "guests":{}, "loc":"868.1700439453125 83.33000183105469"}
+            ]
 
             makeTables = (numTables) => {
                 // Array(numTables).fill(1).map((x,y) => x+y);
-                myDiagram.model.nodeDataArray = [...Array(numTables).keys()].map(tableNumber => {
+                if(!savedSeats){
+                    myDiagram.model.nodeDataArray =  savedSeats;
+                } else if(!defaultTables) {
+                    myDiagram.model.nodeDataArray = [...Array(numTables).keys()].map(tableNumber => {
                     return { "key": tableNumber, "category": "TableC8", "name": `Table ${tableNumber}`, "guests": {}, "loc": "143.5 58" }
                 });
+                }else{
+                    myDiagram.model.nodeDataArray = defaultTables
+                }
             }
 
             processGuest = (guest) => {
                 let party = [];
                 party.push({
                     key: `${guest[fields.guestTitle]} ${guest[fields.guestFname]} ${guest[fields.guestLname]}`,
-                    plus: guest[fields.numInvited] || 0
+                    plus:  0
                 });
                 if (guest[fields.numInvited] > 1) {
                     party.push({
@@ -556,28 +657,124 @@
                 if (guests) {
                     const _guests = [];
                     if (!myGuests.model.nodeDataArray) { myGuests.model.nodeDataArray = []; }
+                    guests.sort((a,b) => a[fields.guestFname].localeCompare(b[fields.guestFname]));
                     guests.forEach(guest => {
                         _guests.push(...processGuest(guest));
                     });
+                    // let kem = {};
+                    // let kat = {};
+                    // kem[fields.guestTitle] = "Mr.";
+                    // kem[fields.guestFname] = "Kemari";
+                    // kem[fields.guestLname] = "Legg";
+                    // kat[fields.guestTitle] = "Mrs.";
+                    // kat[fields.guestFname] = "Katherine";
+                    // kat[fields.guestLname] = "Campanile";
+                    // guests.push(...processGuest(kem));
+                    // guests.push(...processGuest(kat));
                     myGuests.model.nodeDataArray = _guests;
+                    removeDuplicates();
+
                 }
+            }
+
+            removeDuplicates = () => {
+                const guests = myDiagram.model.nodeDataArray.reduce((p, c) => {
+                    if(!c["category"]){
+                        const val = c["key"];
+                        p.push(val);
+                    }
+                    return p;
+                }, []);
+                guests.forEach(k => {
+                    const node = myGuests.findNodeForKey(k);
+                    myGuests.remove(node);
+                });
             }
 
             makeTables(tables);
 
+
             (fetchGuests = () => {
-                loadJSON((data) => {
+                loadJSON('guests.json',(data) => {
                     let _data = JSON.parse(data);
                     makeGuests(_data);
                 });
             })();
+
+            // if(savedSeats){
+            //     myDiagram.model.nodeDataArray = savedSeats;
+            // }
+
         }
 
         exportSeating = () => {
-
+            download = (content, fileName, contentType) => {
+                var a = document.createElement("a");
+                var file = new Blob([content], {type: contentType});
+                a.href = URL.createObjectURL(file);
+                a.download = fileName;
+                a.click();
+            }
+            const modelJson = myDiagram.model.toJson();
+            download(modelJson, 'savedSeatingModel.json', 'text/plain');
         }
 
         importSeating = () => {
+            const fileData = document.getElementById("importedFile").files[0];
+            if (fileData) {
+                // create reader
+                var reader = new FileReader();
+                reader.readAsText(fileData);
+                reader.onload = (e) => {
+                    // browser completed reading file - display it
+                    const myData = e.target.result;
+                    let _data = JSON.parse(myData);
+                    console.log(myData);
+                    myDiagram.model.nodeDataArray = _data.nodeDataArray;
+                    removeDuplicates();
+                };
+            }
+        }
+
+        print = () => {
+            // When the blob is complete, make an anchor tag for it and use the tag to initiate a download
+            // Works in:
+            // * Chrome
+            // * IE11, Edge
+            // * Firefox
+            function myCallback(blob) {
+                var url = window.URL.createObjectURL(blob);
+                var filename = "KatemariWeddingSeating.png";
+
+                var a = document.createElement("a");
+                a.style = "display: none";
+                a.href = url;
+                a.download = filename;
+
+                // IE 11
+                if (window.navigator.msSaveBlob !== undefined) {
+                    window.navigator.msSaveBlob(blob, filename);
+                    return;
+                }
+
+                document.body.appendChild(a);
+                requestAnimationFrame(function() {
+                    a.click();
+                    window.URL.revokeObjectURL(url);
+                    document.body.removeChild(a);
+                });
+            }
+            function makeBlob() {
+            var blob = myDiagram.makeImageData({ background: "white", returnType: "blob", scale: 1, callback: myCallback });
+            }
+            makeBlob();
+
+            // const myImg = myDiagram.makeImage({
+            // scale: 2
+            // });
+        }
+
+        importSeatingOG = () => {
             const importedModel = document.getElementById("importModel").textContent.toString();
             if (importedModel.toString().trim().length == 0) {
                 return;
@@ -591,10 +788,10 @@
             }
         }
 
-        function loadJSON(callback) {
+        function loadJSON(fileName, callback) {
             var xobj = new XMLHttpRequest();
             xobj.overrideMimeType("application/json");
-            xobj.open('GET', 'guests.json', true); // Replace 'my_data' with the path to your file
+            xobj.open('GET', fileName, true); // Replace 'my_data' with the path to your file
             xobj.onreadystatechange = function () {
                 if (xobj.readyState == 4 && xobj.status == "200") {
                     // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
@@ -616,12 +813,23 @@
 
         <div>
             Diagram Model saved in JSON format, automatically updated after each transaction:
-            <pre id="savedModel" style="height:250px"></pre>
+            <textarea id="savedModel" style="height:250px"></textarea>
         </div>
         <div>
             Import existing seating Chart model
-            <textarea id="importModel"></textarea>
+            <!-- <textarea id="importModel"></textarea> -->
+            <input type="file" id="importedFile">
             <button onclick="importSeating()">Import</button>
+        </div>
+        <div>
+            Export existing seating Chart model
+            <!-- <textarea id="importModel"></textarea> -->
+            <button onclick="exportSeating()">Export</button>
+        </div>
+        <div>
+            Save Image of existing seating Chart model
+            <!-- <textarea id="importModel"></textarea> -->
+            <button onclick="print()">Print</button>
         </div>
     </div>
 </body>
