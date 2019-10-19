@@ -136,7 +136,7 @@
                     return $(go.Panel, "Spot",
                         { name: number.toString(), alignment: align, alignmentFocus: focus },
                         $(go.Shape, "Circle",
-                            { name: "SEATSHAPE", desiredSize: new go.Size(30, 30), fill: "burlywood", stroke: "white", strokeWidth: 2 },
+                            { name: "SEATSHAPE", desiredSize: new go.Size(30, 30), fill: "burlywood", stroke: "white", strokeWidth: 0 },
                             new go.Binding("fill")),
                         $(go.TextBlock, number.toString(),
                             { font: "10pt Verdana, sans-serif" },
@@ -768,10 +768,6 @@
             var blob = myDiagram.makeImageData({ background: "white", returnType: "blob", scale: 1, callback: myCallback });
             }
             makeBlob();
-
-            // const myImg = myDiagram.makeImage({
-            // scale: 2
-            // });
         }
 
         importSeatingOG = () => {
@@ -788,6 +784,9 @@
             }
         }
 
+        search = (name) => {
+            
+        }
         function loadJSON(fileName, callback) {
             var xobj = new XMLHttpRequest();
             xobj.overrideMimeType("application/json");
