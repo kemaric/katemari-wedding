@@ -62,7 +62,7 @@
 
         build = () => {
             function init() {
-                if (window.goSamples) goSamples();  // init for these samples -- you don't need to call this
+                // if (window.goSamples) goSamples();  // init for these samples -- you don't need to call this
                 var $ = go.GraphObject.make;
 
                 // Initialize the main Diagram
@@ -76,7 +76,7 @@
                             // For this sample, automatically show the state of the diagram's model on the page
                             "ModelChanged": function (e) {
                                 if (e.isTransactionFinished) {
-                                    document.getElementById("savedModel").textContent = myDiagram.model.toJson();
+                                    document.getElementById("savedModel").textContent = JSON.stringify(myDiagram.model.toJson());
                                 }
                             },
                             "undoManager.isEnabled": true
@@ -117,8 +117,8 @@
                         },
                         $(go.Shape, "Circle", { fill: "blanchedalmond", stroke: null }),
                         $(go.Panel, "Viewbox",
-                            { desiredSize: new go.Size(40, 38) },
-                            $(go.TextBlock, { margin: 2, desiredSize: new go.Size(55, NaN), font: "8pt Verdana, sans-serif", textAlign: "center", stroke: "darkblue" },
+                            { desiredSize: new go.Size(45, 38) },
+                            $(go.TextBlock, { margin: .5, desiredSize: new go.Size(72, NaN), font: "10pt Verdana, sans-serif", textAlign: "center", stroke: "darkblue" },
                                 new go.Binding("text", "", function (data) {
                                     var s = data.key;
                                     if (data.plus) s += " +" + data.plus.toString();
@@ -136,10 +136,10 @@
                     return $(go.Panel, "Spot",
                         { name: number.toString(), alignment: align, alignmentFocus: focus },
                         $(go.Shape, "Circle",
-                            { name: "SEATSHAPE", desiredSize: new go.Size(30, 30), fill: "burlywood", stroke: "white", strokeWidth: 0 },
+                            { name: "SEATSHAPE", desiredSize: new go.Size(0, 0), fill: "burlywood", stroke: "white", strokeWidth: 0 },
                             new go.Binding("fill")),
                         $(go.TextBlock, number.toString(),
-                            { font: "10pt Verdana, sans-serif" },
+                            { font: "0pt Verdana, sans-serif" },
                             new go.Binding("angle", "angle", function (n) { return -n; }))
                     );
                 }
