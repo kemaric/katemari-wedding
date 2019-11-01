@@ -124,7 +124,7 @@ export default {
       if (docIndex > -1) {
         collection.splice(docIndex, 1, doc);
       } else {
-        collection.push(doc);
+        collection.unshift(doc);
       }
     },
   },
