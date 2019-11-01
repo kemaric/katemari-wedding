@@ -32,7 +32,7 @@
       <h2>The Wedding Timeline</h2>
       <ul class="timeline-list container-text-font">
         <li class="timeline-item" v-for="item in timeline" v-bind:key="item.id">
-          <span>{{ item.data().name }} {{ getDate(item) | formatDateTime }}</span>
+          <span>{{ item.data().name }}  {{ getDate(item) | formatDateTime }}</span>
         </li>
         <li v-if="timeline.length === 0">
           <span>TBD</span>
@@ -108,10 +108,10 @@ export default {
       });
     },
     getDate(announcementDate) {
-      if (announcementDate.data().time && announcementDate.data().time.seconds) {
+      if (announcementDate.data().time != null && announcementDate.data().time.seconds) {
         return new Date(announcementDate.data().time.seconds * 1000).toISOString();
       }
-      return announcementDate.data().time.seconds;
+      return null;
     },
     deleteMessage(docId, collection) {
       const docIndex = indexOfMessage(docId, collection);
@@ -178,6 +178,16 @@ padding-right: 1rem;
     max-height: 50vw;
 }
 
+.timeline-list {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+  .timeline-item {
+    display: block;
+    padding: 1rem;
+
+  }
+}
 
 
 </style>

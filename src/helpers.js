@@ -13,10 +13,10 @@ Vue.filter('formatDate', (value) => {
   return value;
 });
 Vue.filter('formatDateTime', (value) => {
-  if (value) {
+  if (value != null) {
     return moment(String(value)).format('hh:mm A');
   }
-  return value;
+  return 'TBD';
 });
 export const myBoi = 'This is a test of an export.';
 
