@@ -23,8 +23,8 @@ import { db } from '../App';
 export default {
   name: 'venue',
   mounted() {
-    console.log('Mounted');
-    this.initDiagram();
+    // console.log('Mounted');
+    // this.initDiagram();
   },
   data() {
     return {
@@ -34,7 +34,7 @@ export default {
     };
   },
   firestore() {
-    console.log('Firestore');
+    // console.log('Firestore');
     return {
       // venueData: this.fetchDiagramSimple(),
     };

@@ -12,7 +12,12 @@ Vue.filter('formatDate', (value) => {
   }
   return value;
 });
-
+Vue.filter('formatDateTime', (value) => {
+  if (value) {
+    return moment(String(value)).format('hh:mm A');
+  }
+  return value;
+});
 export const myBoi = 'This is a test of an export.';
 
 function firebaseDatabaseInstance() {
